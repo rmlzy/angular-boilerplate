@@ -1,6 +1,6 @@
 # NgAdminStarter
 
-A admin starter based on Angular and ng-zerro.
+A admin starter based on Angular and ng-zorro.
 
 ![](./doc/sample1.png)
 
