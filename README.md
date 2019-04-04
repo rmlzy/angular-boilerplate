@@ -1,6 +1,10 @@
 # NgAdminStarter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
+A admin starter based on Angular and ng-zerro.
+
+![](./doc/sample1.png)
+
+![](./doc/sample1.png)
 
 ## Development server
 
