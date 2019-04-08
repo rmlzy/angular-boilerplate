@@ -23,7 +23,6 @@ export class SimpleTableService {
         }
       ]
     });
-    console.log(mockRes.data);
     return Promise.resolve(mockRes.data);
   }
 }
