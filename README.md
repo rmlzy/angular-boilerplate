@@ -1,14 +1,16 @@
 # NgAdminStarter
 
-A admin starter based on Angular and ng-zorro.
+一个基于 [Angular 7.2.0](https://github.com/angular/angular) 和 [ng-zorro](https://github.com/NG-ZORRO/ng-zorro-antd) 的中后台系统脚手架。
+
+## 预览
 
 ![](./doc/sample1.png)
 
-![](./doc/sample1.png)
+![](./doc/sample2.png)
 
-## Development server
+![](./doc/sample3.png)
 
-How to use:
+## 如何使用
 
 ```bash
 git clone git@github.com:rmlzy/ng-admin-starter.git
@@ -17,20 +19,16 @@ yarn install
 yarn run start
 ```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+执行 `ng serve` 之后，打开浏览器输入 `http://localhost:4200/`。
 
-## Code scaffolding
+## 打包和部署
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+使用 `ng build` 来打包项目，默认启用了 `--aot` 和 `--prod`。
 
-## Build
+## 单元测试
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+使用 `ng test` 启用单元测试。
 
-## Running unit tests
+## 自动化测试
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+使用 `ng e2e` 启用自动化测试。
