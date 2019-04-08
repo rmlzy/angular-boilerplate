@@ -18,6 +18,10 @@ const routes: Routes = [
       {
         path: 'data-entry',
         loadChildren: './data-entry/data-entry.module#DataEntryModule'
+      },
+      {
+        path: 'biz',
+        loadChildren: './biz/biz.module#BizModule'
       }
     ]
   },

@@ -49,5 +49,22 @@ export const APP_MENUS = [
       { title: 'TreeSelect 树选择', link: '/data-entry/tree-select' },
       { title: 'Upload 上传', link: '/data-entry/upload' }
     ]
+  },
+  {
+    title: '业务组件',
+    icon: 'smile',
+    children: [
+      { title: '简易表格', link: '/biz/simple-table' },
+      { title: '查询表格', link: '/biz/search-table' },
+      { title: '大数据表格', link: '/biz/data-table' },
+      { title: '简易表单', link: '/biz/simple-form' },
+      { title: '分步表单', link: '/biz/step-form' },
+      { title: '高级表单', link: '/biz/advanced-form' },
+      { title: '简易详情页', link: '/biz/simple-profile' },
+      { title: '高级详情页', link: '/biz/advanced-profile' },
+      { title: '异常', link: '/biz/exception' },
+      { title: 'Markdown编辑器', link: '/biz/md-editor' },
+      { title: '图表', link: '/biz/echarts' }
+    ]
   }
 ];
