@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 import { BizRoutingModule } from './biz-routing.module';
 import { SimpleTableComponent } from './simple-table/simple-table.component';
@@ -15,10 +17,19 @@ import { MdEditorComponent } from './md-editor/md-editor.component';
 import { EchartsComponent } from './echarts/echarts.component';
 
 @NgModule({
-  declarations: [SimpleTableComponent, SearchTableComponent, DataTableComponent, SimpleFormComponent, StepFormComponent, AdvancedFormComponent, SimpleProfileComponent, AdvancedProfileComponent, ExceptionComponent, MdEditorComponent, EchartsComponent],
-  imports: [
-    CommonModule,
-    BizRoutingModule
-  ]
+  declarations: [
+    SimpleTableComponent,
+    SearchTableComponent,
+    DataTableComponent,
+    SimpleFormComponent,
+    StepFormComponent,
+    AdvancedFormComponent,
+    SimpleProfileComponent,
+    AdvancedProfileComponent,
+    ExceptionComponent,
+    MdEditorComponent,
+    EchartsComponent
+  ],
+  imports: [CommonModule, FormsModule, NgZorroAntdModule, BizRoutingModule]
 })
-export class BizModule { }
+export class BizModule {}
