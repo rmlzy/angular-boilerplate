@@ -10,6 +10,10 @@
 
 ![](./doc/sample3.png)
 
+![](./doc/sample4.png)
+
+![](./doc/sample5.png)
+
 ## 如何使用
 
 ```bash
