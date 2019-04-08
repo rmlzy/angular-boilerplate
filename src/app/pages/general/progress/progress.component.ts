@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./progress.component.less']
 })
 export class ProgressComponent implements OnInit {
+  formatOne = (percent: number) => `${percent} Days`;
 
-  constructor() { }
+  formatTwo = () => `Done`;
 
-  ngOnInit() {
-  }
+  constructor() {}
 
+  ngOnInit() {}
 }
