@@ -23,6 +23,7 @@
     "echarts": "^4.2.1",
     "mockjs": "^1.0.1-beta3",
     "ng-zorro-antd": "^7.2.0",
+    "ngx-amap": "^2.2.0",
     "ngx-echarts": "^4.1.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",

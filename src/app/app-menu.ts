@@ -73,7 +73,8 @@ export const APP_MENUS = [
       { title: '高级详情页', link: '/biz/advanced-profile' },
       { title: '异常', link: '/biz/exception' },
       { title: 'Markdown编辑器', link: '/biz/md-editor' },
-      { title: '图表', link: '/biz/echarts' }
+      { title: '图表', link: '/biz/echarts' },
+      { title: '高德地图', link: '/biz/amap' }
     ]
   }
 ];

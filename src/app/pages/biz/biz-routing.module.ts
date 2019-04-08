@@ -11,6 +11,7 @@ import { AdvancedProfileComponent } from './advanced-profile/advanced-profile.co
 import { ExceptionComponent } from './exception/exception.component';
 import { MdEditorComponent } from './md-editor/md-editor.component';
 import { EchartsComponent } from './echarts/echarts.component';
+import { AmapComponent } from './amap/amap.component';
 
 const routes: Routes = [
   { path: 'simple-table', component: SimpleTableComponent },
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'advanced-profile', component: AdvancedProfileComponent },
   { path: 'exception', component: ExceptionComponent },
   { path: 'md-editor', component: MdEditorComponent },
-  { path: 'echarts', component: EchartsComponent }
+  { path: 'echarts', component: EchartsComponent },
+  { path: 'amap', component: AmapComponent }
 ];
 
 @NgModule({

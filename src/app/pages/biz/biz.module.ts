@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { NgxAmapModule } from 'ngx-amap';
 
 import { BizRoutingModule } from './biz-routing.module';
 import { SimpleTableComponent } from './simple-table/simple-table.component';
@@ -16,6 +17,7 @@ import { AdvancedProfileComponent } from './advanced-profile/advanced-profile.co
 import { ExceptionComponent } from './exception/exception.component';
 import { MdEditorComponent } from './md-editor/md-editor.component';
 import { EchartsComponent } from './echarts/echarts.component';
+import { AmapComponent } from './amap/amap.component';
 
 @NgModule({
   declarations: [
@@ -29,14 +31,19 @@ import { EchartsComponent } from './echarts/echarts.component';
     AdvancedProfileComponent,
     ExceptionComponent,
     MdEditorComponent,
-    EchartsComponent
+    EchartsComponent,
+    AmapComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     NgZorroAntdModule,
     NgxEchartsModule,
-    BizRoutingModule
+    BizRoutingModule,
+    NgxAmapModule.forRoot({
+      // a sample key, please register your key at https://lbs.amap.com/
+      apiKey: '9e7b9f938691f60715ddae07436cdacd'
+    })
   ]
 })
 export class BizModule {}

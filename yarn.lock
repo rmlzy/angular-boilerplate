@@ -4460,6 +4460,13 @@ ng-zorro-antd@^7.2.0:
     date-fns "^1.29.0"
     tslib "^1.9.0"
 
+ngx-amap@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/ngx-amap/-/ngx-amap-2.2.0.tgz#2a5bbf96430c0984ddd18b155079869cd1a21bcd"
+  integrity sha512-935l6gaCOa6pkjHSb31WXoMTgNk0sQYNF2pjGELri/LV++p9YrVD04FytTe6QQ9G6FAjPQIiDNo3RrwWi/DnuQ==
+  dependencies:
+    tslib "^1.9.0"
+
 ngx-echarts@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/ngx-echarts/-/ngx-echarts-4.1.0.tgz#27c9ac1ad69bb3507d0971259f89e568cc2cad3d"
