@@ -11,7 +11,16 @@ export const APP_MENUS = [
     children: [
       { title: '按钮', link: '/general/button' },
       { title: '图标', link: '/general/icon' },
-      { title: '栅格', link: '/general/grid' }
+      { title: '栅格', link: '/general/grid' },
+      { title: '警告提示', link: '/general/alert' },
+      { title: '抽屉', link: '/general/drawer' },
+      { title: '全局提示', link: '/general/message' },
+      { title: '对话框', link: '/general/modal' },
+      { title: '通知提醒框', link: '/general/notification' },
+      { title: '气泡确认框', link: '/general/popconfirm' },
+      { title: '进度条', link: '/general/progress' },
+      { title: '加载占位图', link: '/general/skeleton' },
+      { title: '加载中', link: '/general/spin' }
     ]
   },
   {

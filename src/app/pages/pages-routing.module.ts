@@ -16,6 +16,10 @@ const routes: Routes = [
         loadChildren: './general/general.module#GeneralModule'
       },
       {
+        path: 'navigation',
+        loadChildren: './navigation/navigation.module#NavigationModule'
+      },
+      {
         path: 'data-entry',
         loadChildren: './data-entry/data-entry.module#DataEntryModule'
       },
