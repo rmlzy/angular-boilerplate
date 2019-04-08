@@ -13,7 +13,7 @@ export class DefaultComponent implements OnInit {
 
   ngOnInit() {}
 
-  onToggleCollapsed() {
+  onToggleCollapsed(evt) {
     console.log('执行了 onToggleCollapsed');
     this.collapsed = !this.collapsed;
   }
