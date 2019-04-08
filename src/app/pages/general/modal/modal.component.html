@@ -1,20 +1,23 @@
 <div nz-row nzGutter="15">
   <div nz-col nzSpan="8">
-    <nz-card nzTitle="基础对话框">
-      <button nz-button nzType="primary" (click)="showModal1()">
-        <span>Show Modal</span>
-      </button>
+    <nz-card nzTitle="基本使用">
+      <p>最简单的用法。</p>
+      <div>
+        <button nz-button nzType="primary" (click)="showModal1()">
+          <span>Show Modal</span>
+        </button>
 
-      <nz-modal
-        [(nzVisible)]="visible1"
-        nzTitle="The first Modal"
-        (nzOnCancel)="handleCancel1()"
-        (nzOnOk)="handleOk1()"
-      >
-        <p>Content one</p>
-        <p>Content two</p>
-        <p>Content three</p>
-      </nz-modal>
+        <nz-modal
+          [(nzVisible)]="visible1"
+          nzTitle="The first Modal"
+          (nzOnCancel)="handleCancel1()"
+          (nzOnOk)="handleOk1()"
+        >
+          <p>Content one</p>
+          <p>Content two</p>
+          <p>Content three</p>
+        </nz-modal>
+      </div>
     </nz-card>
   </div>
 
