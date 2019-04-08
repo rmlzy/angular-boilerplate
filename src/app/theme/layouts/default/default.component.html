@@ -1,6 +1,9 @@
-<div class="default-layout header-fixed aside-fixed">
+<div [ngClass]="{ 'default-layout': true, 'aside-collapsed': collapsed }">
   <app-header></app-header>
   <app-body></app-body>
-  <app-aside></app-aside>
+  <app-aside
+    [collapsed]="collapsed"
+    (toggleCollapsed)="onToggleCollapsed($event)"
+  ></app-aside>
   <app-footer></app-footer>
 </div>

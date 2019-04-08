@@ -11,17 +11,17 @@ import {
 } from './components';
 import { DefaultComponent, BlankComponent } from './layouts';
 
-const COMPONENTS = [DefaultComponent, AppHeaderComponent];
+const COMPONENTS = [
+  DefaultComponent,
+  AppHeaderComponent,
+  AppBodyComponent,
+  AppAsideComponent,
+  AppFooterComponent,
+  BlankComponent
+];
 
 @NgModule({
-  declarations: [
-    ...COMPONENTS,
-    AppHeaderComponent,
-    AppFooterComponent,
-    AppAsideComponent,
-    BlankComponent,
-    AppBodyComponent
-  ],
+  declarations: [...COMPONENTS],
   imports: [CommonModule, NgZorroAntdModule, ThemeRoutingModule]
 })
 export class ThemeModule {}
