@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NzMessageService } from 'ng-zorro-antd';
 
 @Component({
   selector: 'app-message',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./message.component.less']
 })
 export class MessageComponent implements OnInit {
+  constructor(private message: NzMessageService) {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  createMessage(type: string = 'info'): void {
+    this.message.create(type, `This is a message of ${type}`);
   }
-
 }
