@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 import { BizRoutingModule } from './biz-routing.module';
 import { SimpleTableComponent } from './simple-table/simple-table.component';
@@ -30,6 +31,12 @@ import { EchartsComponent } from './echarts/echarts.component';
     MdEditorComponent,
     EchartsComponent
   ],
-  imports: [CommonModule, FormsModule, NgZorroAntdModule, BizRoutingModule]
+  imports: [
+    CommonModule,
+    FormsModule,
+    NgZorroAntdModule,
+    NgxEchartsModule,
+    BizRoutingModule
+  ]
 })
 export class BizModule {}

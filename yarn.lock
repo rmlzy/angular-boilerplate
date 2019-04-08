@@ -335,6 +335,13 @@
     semver "5.6.0"
     semver-intersect "1.4.0"
 
+"@types/echarts@^4.1.8":
+  version "4.1.8"
+  resolved "https://registry.yarnpkg.com/@types/echarts/-/echarts-4.1.8.tgz#ee0b3e53606fb44680c32b1426f5bf44c8120e5a"
+  integrity sha512-Ivpe02MZ4Em2Cj535d/7ftTNu7G3Fgfau+pH5uq49xxF8BADhtWznAg245+l0e7plMLVNeylydmcMPUh/czuzw==
+  dependencies:
+    "@types/zrender" "*"
+
 "@types/jasmine@*":
   version "3.3.12"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.3.12.tgz#bf282cb540e9ad7a0a04b742082c073b655eab39"
@@ -385,6 +392,11 @@
     "@types/node" "*"
     "@types/source-list-map" "*"
     source-map "^0.6.1"
+
+"@types/zrender@*":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@types/zrender/-/zrender-4.0.0.tgz#a6806f12ec4eccaaebd9b0d816f049aca6188fbd"
+  integrity sha512-s89GOIeKFiod2KSqHkfd2rzx+T2DVu7ihZCBEBnhFrzvQPUmzvDSBot9Fi1DfMQm9Odg+rTqoMGC38RvrwJK2w==
 
 "@webassemblyjs/ast@1.7.11":
   version "1.7.11"
@@ -2129,6 +2141,13 @@ ecc-jsbn@~0.1.1:
   dependencies:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
+
+echarts@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/echarts/-/echarts-4.2.1.tgz#9a8ea3b03354f86f824d97625c334cf16965ef03"
+  integrity sha512-pw4xScRPsLegD/cqEcoXRKeA2SD4+s+Kyo0Na166NamOWhzNl2yI5RZ2rE97tBlAopNmhyMeBVpAeD5qb+ee1A==
+  dependencies:
+    zrender "4.0.7"
 
 ee-first@1.1.1:
   version "1.1.1"
@@ -4439,6 +4458,13 @@ ng-zorro-antd@^7.2.0:
     "@angular/cdk" "^7.0.0"
     "@ant-design/icons-angular" "^2.0.2"
     date-fns "^1.29.0"
+    tslib "^1.9.0"
+
+ngx-echarts@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/ngx-echarts/-/ngx-echarts-4.1.0.tgz#27c9ac1ad69bb3507d0971259f89e568cc2cad3d"
+  integrity sha512-N0mb8/A3fhFxTPLFHw6TGcn+Aumrt/ltUhhJIjMtzAFYoJ3NQdiECCtq53keT1gsA5M8zReYp2HkZQfM0TmZmg==
+  dependencies:
     tslib "^1.9.0"
 
 nice-try@^1.0.4:
@@ -7289,3 +7315,8 @@ zone.js@~0.8.26:
   version "0.8.29"
   resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.8.29.tgz#8dce92aa0dd553b50bc5bfbb90af9986ad845a12"
   integrity sha512-mla2acNCMkWXBD+c+yeUrBUrzOxYMNFdQ6FGfigGGtEVBPJx07BQeJekjt9DmH1FtZek4E9rE1eRR9qQpxACOQ==
+
+zrender@4.0.7:
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/zrender/-/zrender-4.0.7.tgz#15ae960822f5efed410995d37e5107fe3de10e6d"
+  integrity sha512-TNloHe0ums6zxbHfnaCryM61J4IWDajZwNq6dHk9vfWhhysO/OeFvvR0drBs/nbXha2YxSzfQj2FiCd6RVBe+Q==
