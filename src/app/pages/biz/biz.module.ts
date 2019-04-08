@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { NgxAmapModule } from 'ngx-amap';
+import { UEditorModule } from 'ngx-ueditor';
 
 import { BizRoutingModule } from './biz-routing.module';
 import { SimpleTableComponent } from './simple-table/simple-table.component';
@@ -18,6 +19,7 @@ import { ExceptionComponent } from './exception/exception.component';
 import { MdEditorComponent } from './md-editor/md-editor.component';
 import { EchartsComponent } from './echarts/echarts.component';
 import { AmapComponent } from './amap/amap.component';
+import { UeditorComponent } from './ueditor/ueditor.component';
 
 @NgModule({
   declarations: [
@@ -32,17 +34,28 @@ import { AmapComponent } from './amap/amap.component';
     ExceptionComponent,
     MdEditorComponent,
     EchartsComponent,
-    AmapComponent
+    AmapComponent,
+    UeditorComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
+    BizRoutingModule,
     NgZorroAntdModule,
     NgxEchartsModule,
-    BizRoutingModule,
     NgxAmapModule.forRoot({
       // a sample key, please register your key at https://lbs.amap.com/
       apiKey: '9e7b9f938691f60715ddae07436cdacd'
+    }),
+    UEditorModule.forRoot({
+      js: [
+        `../../assets/ueditor/ueditor.config.js`,
+        `../../assets/ueditor/ueditor.all.min.js`
+      ],
+      // 默认前端配置项
+      options: {
+        UEDITOR_HOME_URL: '../../assets/ueditor/'
+      }
     })
   ]
 })

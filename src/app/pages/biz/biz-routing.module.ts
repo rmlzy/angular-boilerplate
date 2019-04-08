@@ -12,6 +12,7 @@ import { ExceptionComponent } from './exception/exception.component';
 import { MdEditorComponent } from './md-editor/md-editor.component';
 import { EchartsComponent } from './echarts/echarts.component';
 import { AmapComponent } from './amap/amap.component';
+import { UeditorComponent } from './ueditor/ueditor.component';
 
 const routes: Routes = [
   { path: 'simple-table', component: SimpleTableComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'advanced-profile', component: AdvancedProfileComponent },
   { path: 'exception', component: ExceptionComponent },
   { path: 'md-editor', component: MdEditorComponent },
+  { path: 'ueditor', component: UeditorComponent },
   { path: 'echarts', component: EchartsComponent },
   { path: 'amap', component: AmapComponent }
 ];
