@@ -1,10 +1,11 @@
 {
   "name": "ng-admin-starter",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --aot",
+    "gh": "ng build --prod --base-href https://rmlzy.github.io/ng-admin-starter/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
