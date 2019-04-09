@@ -3,7 +3,7 @@ export const APP_MENUS = [
   {
     title: '首页',
     icon: 'dashboard',
-    link: '/dashboard'
+    link: '/'
   },
   {
     title: '通用',
