@@ -1,7 +1,7 @@
 // 目前仅支持三级目录
 export const APP_MENUS = [
   {
-    title: '控制台',
+    title: '首页',
     icon: 'dashboard',
     link: '/dashboard'
   },

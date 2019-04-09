@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { PagesRoutingModule } from './pages-routing.module';
@@ -15,7 +16,8 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     NgZorroAntdModule,
     PagesRoutingModule,
-    ThemeModule
+    ThemeModule,
+    NgxEchartsModule
   ]
 })
 export class PagesModule {}

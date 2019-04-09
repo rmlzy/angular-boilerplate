@@ -1,3 +1,87 @@
-<p>
-  dashboard works!
-</p>
+<div nz-row nzGutter="15">
+  <div nz-col nzSpan="6">
+    <nz-card>
+      <p>总销售额</p>
+      <h2>¥ 126,560</h2>
+      <div>周同比12%，日同比11%</div>
+    </nz-card>
+  </div>
+
+  <div nz-col nzSpan="6">
+    <nz-card>
+      <p>访问量</p>
+      <h2>¥ 8,560</h2>
+      <div>日访问量1,234</div>
+    </nz-card>
+  </div>
+
+  <div nz-col nzSpan="6">
+    <nz-card>
+      <p>支付笔数</p>
+      <h2>¥ 6,560</h2>
+      <div>转化率12%</div>
+    </nz-card>
+  </div>
+
+  <div nz-col nzSpan="6">
+    <nz-card>
+      <p>运营活动效果</p>
+      <h2>80%</h2>
+      <div>周同比12%，日同比11%</div>
+    </nz-card>
+  </div>
+</div>
+
+<div nz-row nzGutter="15">
+  <div nz-col nzSpan="24">
+    <nz-card nzTitle="本周销售分析">
+      <div echarts [options]="areaOptions"></div>
+    </nz-card>
+  </div>
+</div>
+
+<div nz-row nzGutter="15">
+  <div nz-col nzSpan="12">
+    <nz-card nzTitle="销售占比">
+      <div echarts [options]="pieOptions"></div>
+    </nz-card>
+  </div>
+  <div nz-col nzSpan="12">
+    <nz-card nzTitle="销售分析">
+      <div echarts [options]="radarOptions"></div>
+    </nz-card>
+  </div>
+</div>
+
+<div nz-row nzGutter="15">
+  <div nz-col nzSpan="24">
+    <nz-card nzTitle="各品牌销售数据">
+      <nz-table #basicTable [nzData]="tableData" [nzShowPagination]="false">
+        <thead>
+          <tr>
+            <th>排名</th>
+            <th>品牌</th>
+            <th>平台</th>
+            <th>总销售金额</th>
+            <th>日同比</th>
+            <th>月同比</th>
+            <th>季同比</th>
+            <th>年同比</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of basicTable.data">
+            <td>{{ data.id }}</td>
+            <td>{{ data.brandName }}</td>
+            <td>{{ data.platformName }}</td>
+            <td>{{ data.total }}</td>
+            <td>{{ data.day }}</td>
+            <td>{{ data.month }}</td>
+            <td>{{ data.quarter }}</td>
+            <td>{{ data.year }}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </nz-card>
+  </div>
+</div>
