@@ -16,12 +16,7 @@ export class AppAsideComponent implements OnInit {
 
   ngOnInit() {}
 
-  handleMenuClick(url) {
-    console.log(url);
-  }
-
   toggle() {
-    console.log('执行了 toggle');
     this.toggleCollapsed.emit();
   }
 }
