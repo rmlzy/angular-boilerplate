@@ -12,4 +12,7 @@ export class PageHeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  onBack() {
+    console.log('onBack');
+  }
 }
