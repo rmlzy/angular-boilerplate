@@ -1,3 +1,108 @@
-<p>
-  advanced-form works!
-</p>
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+  <nz-card nzTitle="基础信息">
+    <div nz-row>
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="createDate" nzRequired>创建日期</nz-form-label>
+          <nz-form-control [nzSm]="16" [nzXs]="24">
+            <nz-date-picker style="width: 100%;" id="createDate" formControlName="createDate"></nz-date-picker>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="payWay" nzRequired>支付方式</nz-form-label>
+          <nz-form-control [nzSm]="16" [nzXs]="24">
+            <nz-select style="width: 100%;" nzShowSearch nzAllowClear nzPlaceHolder="请选择" id="payWay"
+              formControlName="payWay">
+              <nz-option nzLabel="先货后款" nzValue="1"></nz-option>
+              <nz-option nzLabel="货到付款" nzValue="2"></nz-option>
+            </nz-select>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+
+    <div nz-row>
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="source" nzRequired>采购方</nz-form-label>
+          <nz-form-control [nzSm]="16" [nzXs]="24">
+            <input nz-input id="source" formControlName="source" placeholder="请输入" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="company" nzRequired>归属公司</nz-form-label>
+          <nz-form-control [nzSm]="16" [nzXs]="24">
+            <input nz-input id="company" formControlName="company" placeholder="请输入" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+
+    <div nz-row>
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="department" nzRequired>归属部门</nz-form-label>
+          <nz-form-control [nzSm]="16" [nzXs]="24">
+            <input nz-input id="department" formControlName="department" placeholder="请输入" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="salesman" nzRequired>对接业务员</nz-form-label>
+          <nz-form-control [nzSm]="16" [nzXs]="24">
+            <input nz-input id="salesman" formControlName="salesman" placeholder="请输入" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+
+    <div nz-row>
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="arrivalDate" nzRequired>到货日期</nz-form-label>
+          <nz-form-control [nzSm]="16" [nzXs]="24">
+            <nz-date-picker style="width: 100%;" id="arrivalDate" formControlName="arrivalDate"></nz-date-picker>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="amount" nzRequired>采购数量</nz-form-label>
+          <nz-form-control [nzSm]="16" [nzXs]="24">
+            <input nz-input id="amount" formControlName="amount" placeholder="请输入" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+
+    <div nz-row>
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="isNew" nzRequired>是否新签</nz-form-label>
+          <nz-form-control [nzSm]="16" [nzXs]="24">
+            <nz-radio-group id="isNew" formControlName="isNew">
+              <label nz-radio nzValue="1">是</label>
+              <label nz-radio nzValue="0">否</label>
+            </nz-radio-group>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzSpan="12">
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="isCoupon" nzRequired>是否优惠</nz-form-label>
+          <nz-form-control [nzSm]="16" [nzXs]="24">
+            <nz-radio-group id="isCoupon" formControlName="isCoupon">
+              <label nz-radio nzValue="1">是</label>
+              <label nz-radio nzValue="0">否</label>
+            </nz-radio-group>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+  </nz-card>
+</form>
