@@ -20,6 +20,10 @@ import { MdEditorComponent } from './md-editor/md-editor.component';
 import { EchartsComponent } from './echarts/echarts.component';
 import { AmapComponent } from './amap/amap.component';
 import { UeditorComponent } from './ueditor/ueditor.component';
+import { CustomComponentComponent } from './custom-component/custom-component.component';
+
+// custom components
+import { CustomBtnComponent } from '../../components/custom-btn/custom-btn.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,9 @@ import { UeditorComponent } from './ueditor/ueditor.component';
     MdEditorComponent,
     EchartsComponent,
     AmapComponent,
-    UeditorComponent
+    UeditorComponent,
+    CustomComponentComponent,
+    CustomBtnComponent
   ],
   imports: [
     CommonModule,
@@ -59,4 +65,4 @@ import { UeditorComponent } from './ueditor/ueditor.component';
     })
   ]
 })
-export class BizModule {}
+export class BizModule { }

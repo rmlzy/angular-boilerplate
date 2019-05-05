@@ -32,11 +32,7 @@
         <td>{{ data.idCardNo }}</td>
         <td>{{ data.address }}</td>
         <td>
-          <nz-switch
-            [ngModel]="data.enable"
-            nzCheckedChildren="启用"
-            nzUnCheckedChildren="停用"
-          ></nz-switch>
+          <nz-switch [ngModel]="data.enable" nzCheckedChildren="启用" nzUnCheckedChildren="停用"></nz-switch>
         </td>
         <td>
           <a>查看</a>

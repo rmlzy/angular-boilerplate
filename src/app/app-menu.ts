@@ -75,7 +75,8 @@ export const APP_MENUS = [
       { title: 'Markdown编辑器', link: '/biz/md-editor' },
       { title: '富文本编辑器', link: '/biz/ueditor' },
       { title: '图表', link: '/biz/echarts' },
-      { title: '高德地图', link: '/biz/amap' }
+      { title: '高德地图', link: '/biz/amap' },
+      { title: '自定义组件', link: '/biz/custom-component' },
     ]
   }
 ];

@@ -13,6 +13,7 @@ import { MdEditorComponent } from './md-editor/md-editor.component';
 import { EchartsComponent } from './echarts/echarts.component';
 import { AmapComponent } from './amap/amap.component';
 import { UeditorComponent } from './ueditor/ueditor.component';
+import { CustomComponentComponent } from './custom-component/custom-component.component';
 
 const routes: Routes = [
   { path: 'simple-table', component: SimpleTableComponent },
@@ -27,11 +28,12 @@ const routes: Routes = [
   { path: 'md-editor', component: MdEditorComponent },
   { path: 'ueditor', component: UeditorComponent },
   { path: 'echarts', component: EchartsComponent },
-  { path: 'amap', component: AmapComponent }
+  { path: 'amap', component: AmapComponent },
+  { path: 'custom-component', component: CustomComponentComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class BizRoutingModule {}
+export class BizRoutingModule { }
