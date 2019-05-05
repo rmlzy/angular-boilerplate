@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { NgxAmapModule } from 'ngx-amap';
@@ -46,6 +46,7 @@ import { CustomBtnComponent } from '../../components/custom-btn/custom-btn.compo
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     BizRoutingModule,
     NgZorroAntdModule,
     NgxEchartsModule,
