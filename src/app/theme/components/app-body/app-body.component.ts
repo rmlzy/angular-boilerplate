@@ -60,10 +60,6 @@ export class AppBodyComponent implements OnInit {
         }
       }
     });
-    currentBreads.unshift({
-      title: '首页',
-      link: '/'
-    });
     this.currentBreads = currentBreads;
   }
 }
