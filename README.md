@@ -2,7 +2,7 @@
 
 一个基于 [Angular 7.2.0](https://github.com/angular/angular) 和 [ng-zorro](https://github.com/NG-ZORRO/ng-zorro-antd) 的中后台系统模板。
 
-[Demo 地址](https://rmlzy.github.io/ng-admin-starter/)
+[Demo 地址](https://fs-coder.github.io/ng-admin-starter/)
 
 ## 预览
 
