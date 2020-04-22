@@ -20,7 +20,7 @@ React 版本可以参考 [cra-admin-starter](https://github.com/fs-coder/cra-adm
 ## 如何使用
 
 ```bash
-git clone git@github.com:rmlzy/ng-admin-starter.git
+git clone git@github.com:fs-coder/ng-admin-starter.git
 cd ng-admin-starter
 yarn install
 yarn run start
