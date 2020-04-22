@@ -1,6 +1,7 @@
 # NgAdminStarter
 
 一个基于 [Angular 7.2.0](https://github.com/angular/angular) 和 [ng-zorro](https://github.com/NG-ZORRO/ng-zorro-antd) 的中后台系统模板。
+React 版本可以参考 [cra-admin-starter](https://github.com/fs-coder/cra-admin-starter)
 
 [Demo 地址](https://fs-coder.github.io/ng-admin-starter/)
 
