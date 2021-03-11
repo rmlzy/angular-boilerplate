@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { NgZorroAntdModule } from '../../ng-zorro-antd.module';
 
 import { NavigationRoutingModule } from './navigation-routing.module';
 import { AffixComponent } from './affix/affix.component';

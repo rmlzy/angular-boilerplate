@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { NgZorroAntdModule } from '../../ng-zorro-antd.module';
 
 import { GeneralRoutingModule } from './general-routing.module';
 import { ButtonComponent } from './button/button.component';
