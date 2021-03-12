@@ -6,9 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./button.component.less']
 })
 export class ButtonComponent implements OnInit {
-  size = 'large';
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit(): void {
+  }
+
 }

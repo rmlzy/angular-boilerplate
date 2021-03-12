@@ -1,87 +1,120 @@
 <div nz-row nzGutter="15">
   <div nz-col nzSpan="6">
-    <nz-card>
-      <p>总销售额</p>
-      <h2>¥ 126,560</h2>
-      <div>周同比12%，日同比11%</div>
+    <nz-card nzSize="small" class="stat">
+      <nz-statistic [nzValue]="(1949101 | number)!" [nzTitle]="'Active Users'"></nz-statistic>
+      <div class="stat--progress">
+        <nz-progress [nzPercent]="30"></nz-progress>
+      </div>
     </nz-card>
   </div>
-
   <div nz-col nzSpan="6">
-    <nz-card>
-      <p>访问量</p>
-      <h2>¥ 8,560</h2>
-      <div>日访问量1,234</div>
+    <nz-card nzSize="small" class="stat">
+      <nz-statistic [nzValue]="(1949101 | number)!" [nzTitle]="'Active Users'"></nz-statistic>
+      <div class="stat--chart" echarts [options]="chart1Options" theme="roma"></div>
     </nz-card>
   </div>
-
   <div nz-col nzSpan="6">
-    <nz-card>
-      <p>支付笔数</p>
-      <h2>¥ 6,560</h2>
-      <div>转化率12%</div>
+    <nz-card nzSize="small" class="stat">
+      <nz-statistic [nzValue]="(1949101 | number)!" [nzTitle]="'Active Users'"></nz-statistic>
+      <div class="stat--progress">
+        <nz-progress [nzPercent]="30"></nz-progress>
+      </div>
     </nz-card>
   </div>
-
   <div nz-col nzSpan="6">
-    <nz-card>
-      <p>运营活动效果</p>
-      <h2>80%</h2>
-      <div>周同比12%，日同比11%</div>
-    </nz-card>
-  </div>
-</div>
-
-<div nz-row nzGutter="15">
-  <div nz-col nzSpan="24">
-    <nz-card nzTitle="本周销售分析">
-      <div echarts [options]="areaOptions"></div>
+    <nz-card nzSize="small" class="stat">
+      <nz-statistic [nzValue]="(1949101 | number)!" [nzTitle]="'Active Users'"></nz-statistic>
+      <div class="stat--progress">
+        <nz-progress [nzPercent]="30"></nz-progress>
+      </div>
     </nz-card>
   </div>
 </div>
 
 <div nz-row nzGutter="15">
   <div nz-col nzSpan="12">
-    <nz-card nzTitle="销售占比">
-      <div echarts [options]="pieOptions"></div>
+    <nz-card nzTitle="图表" nzSize="small">
+      <div echarts [options]="chart2Options" theme="roma"></div>
     </nz-card>
+
+    <div nz-row nzGutter="15" style="margin-top: 15px">
+      <div nz-col nzSpan="8">
+        <nz-card>
+          <nz-statistic [nzValue]="(1128 | number)!" [nzTitle]="'Feedback'"></nz-statistic>
+        </nz-card>
+      </div>
+      <div nz-col nzSpan="8">
+        <nz-card>
+          <nz-statistic [nzValue]="(1128 | number)!" [nzTitle]="'Feedback'"></nz-statistic>
+        </nz-card>
+      </div>
+      <div nz-col nzSpan="8">
+        <nz-card>
+          <nz-statistic [nzValue]="(1128 | number)!" [nzTitle]="'Feedback'"></nz-statistic>
+        </nz-card>
+      </div>
+    </div>
   </div>
   <div nz-col nzSpan="12">
-    <nz-card nzTitle="销售分析">
-      <div echarts [options]="radarOptions"></div>
-    </nz-card>
-  </div>
-</div>
-
-<div nz-row nzGutter="15">
-  <div nz-col nzSpan="24">
-    <nz-card nzTitle="各品牌销售数据">
-      <nz-table #basicTable [nzData]="tableData" [nzShowPagination]="false">
+    <nz-card nzSize="small" class="table-demo">
+      <nz-table #basicTable [nzData]="listOfData" [nzShowPagination]="false">
         <thead>
-          <tr>
-            <th>排名</th>
-            <th>品牌</th>
-            <th>平台</th>
-            <th>总销售金额</th>
-            <th>日同比</th>
-            <th>月同比</th>
-            <th>季同比</th>
-            <th>年同比</th>
-          </tr>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Address</th>
+        </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let data of basicTable.data">
-            <td>{{ data.id }}</td>
-            <td>{{ data.brandName }}</td>
-            <td>{{ data.platformName }}</td>
-            <td>{{ data.total }}</td>
-            <td>{{ data.day }}</td>
-            <td>{{ data.month }}</td>
-            <td>{{ data.quarter }}</td>
-            <td>{{ data.year }}</td>
-          </tr>
+        <tr *ngFor="let data of basicTable.data">
+          <td>{{ data.name }}</td>
+          <td>{{ data.age }}</td>
+          <td>{{ data.address }}</td>
+        </tr>
         </tbody>
       </nz-table>
     </nz-card>
+    <nz-card nzSize="small">
+      <div class="carousel-demo">
+        <nz-carousel nzEffect="scrollx">
+          <div nz-carousel-content *ngFor="let index of [0,1,2,3]">
+            <h3>{{ index }}</h3>
+          </div>
+        </nz-carousel>
+      </div>
+    </nz-card>
   </div>
 </div>
+
+<nz-card nzSize="small">
+  <nz-descriptions nzTitle="User Info" nzBordered>
+    <nz-descriptions-item nzTitle="Product">Cloud Database</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Billing Mode">Prepaid</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Automatic Renewal">YES</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Order Time">
+      2018-04-24 18:00:00
+    </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Usage Time" [nzSpan]="2">
+      2018-04-24 18:00:00 To 2019-04-24 18:00:00
+    </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Status" [nzSpan]="3">
+      <nz-badge nzStatus="processing" nzText="Running"></nz-badge>
+    </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Negotiated Amount">$80.00</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Discount">$20.00</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Official Receipts">$60.00</nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Config Info">
+      Data disk type: MongoDB
+      <br />
+      Database version: 3.4
+      <br />
+      Package: dds.mongo.mid
+      <br />
+      Storage space: 10 GB
+      <br />
+      Replication_factor:3
+      <br />
+      Region: East China 1<br />
+    </nz-descriptions-item>
+  </nz-descriptions>
+</nz-card>

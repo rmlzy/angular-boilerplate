@@ -31,12 +31,11 @@
   </ul>
 
   <div class="user">
-    <nz-dropdown [nzPlacement]="'bottomRight'">
-      <div nz-dropdown class="user-name">
-        <nz-avatar nzIcon="user"></nz-avatar>
-        <span>超级管理员</span>
-      </div>
-
+    <div nz-dropdown [nzDropdownMenu]="menu" class="user-name">
+      <nz-avatar nzIcon="user"></nz-avatar>
+      <span>超级管理员</span>
+    </div>
+    <nz-dropdown-menu #menu="nzDropdownMenu">
       <ul nz-menu nzSelectable>
         <li nz-menu-item>
           <a>个人中心</a>
@@ -48,6 +47,6 @@
           <a>退出登录</a>
         </li>
       </ul>
-    </nz-dropdown>
+    </nz-dropdown-menu>
   </div>
 </div>
