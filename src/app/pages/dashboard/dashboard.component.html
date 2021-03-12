@@ -37,7 +37,7 @@
       <div echarts [options]="chart2Options" theme="roma"></div>
     </nz-card>
 
-    <div nz-row nzGutter="15" style="margin-top: 15px">
+    <div nz-row nzGutter="15" style="margin-top: 15px; margin-bottom: 0">
       <div nz-col nzSpan="8">
         <nz-card>
           <nz-statistic [nzValue]="(1128 | number)!" [nzTitle]="'Feedback'"></nz-statistic>
@@ -56,7 +56,7 @@
     </div>
   </div>
   <div nz-col nzSpan="12">
-    <nz-card nzSize="small" class="table-demo">
+    <div class="table-demo">
       <nz-table #basicTable [nzData]="listOfData" [nzShowPagination]="false">
         <thead>
         <tr>
@@ -73,7 +73,7 @@
         </tr>
         </tbody>
       </nz-table>
-    </nz-card>
+    </div>
     <nz-card nzSize="small">
       <div class="carousel-demo">
         <nz-carousel nzEffect="scrollx">
