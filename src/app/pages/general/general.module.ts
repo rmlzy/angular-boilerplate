@@ -6,9 +6,10 @@ import { GeneralRoutingModule } from "./general-routing.module";
 import { E404Component } from "./e404/e404.component";
 import { E500Component } from "./e500/e500.component";
 import { MaintenanceComponent } from "./maintenance/maintenance.component";
+import { AjaxComponent } from './ajax/ajax.component';
 
 @NgModule({
-  declarations: [E404Component, E500Component, MaintenanceComponent],
+  declarations: [E404Component, E500Component, MaintenanceComponent, AjaxComponent],
   imports: [CommonModule, SharedModule, GeneralRoutingModule],
 })
 export class GeneralModule {}

@@ -17,6 +17,7 @@ export const APP_MENUS: Menu[] = [
       { level: 2, title: "404", link: "/general/404" },
       { level: 2, title: "500", link: "/general/500" },
       { level: 2, title: "maintenance", link: "/general/maintenance" },
+      { level: 2, title: "ajax", link: "/general/ajax" },
     ],
   },
   {
