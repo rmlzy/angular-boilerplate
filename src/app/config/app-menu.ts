@@ -16,6 +16,8 @@ export const APP_MENUS: Menu[] = [
     children: [
       { level: 2, title: "按钮", link: "/general/button" },
       { level: 2, title: "404", link: "/general/404" },
+      { level: 2, title: "500", link: "/general/500" },
+      { level: 2, title: "maintenance", link: "/general/maintenance" },
     ],
   },
   {
