@@ -1,38 +1,5 @@
-.default-layout {
+.ng-layout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: #f4f6fa;
-
-  app-aside {
-    position: fixed;
-    top: 50px;
-    left: 0;
-    z-index: 1019;
-    width: 200px;
-    height: calc(100vh - 50px);
-  }
-
-  app-body {
-    margin-top: 50px;
-    margin-left: 200px;
-  }
-
-  app-footer {
-    margin-left: 200px;
-  }
-
-  &.aside-collapsed {
-    app-aside {
-      width: 50px;
-    }
-
-    app-body {
-      margin-left: 50px;
-    }
-
-    app-footer {
-      margin-left: 50px;
-    }
-  }
 }

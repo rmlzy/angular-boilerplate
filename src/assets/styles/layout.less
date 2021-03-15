@@ -1,0 +1,97 @@
+.ng-layout {
+  background: #f4f6fa;
+
+  .ant-menu-horizontal {
+    border-bottom: none;
+  }
+
+  .ant-menu-inline {
+    border-right: none;
+  }
+
+  &-container {
+    width: 1288px;
+    margin: 0 auto;
+  }
+}
+
+// 垂直布局
+.is-vertical {
+  .app-aside {
+    border-bottom: 1px solid #e8e8e8;
+    overflow-y: hidden;
+  }
+}
+
+.aside-collapsed {
+  .app-aside {
+    width: 80px !important;
+  }
+
+  app-body {
+    margin-left: 80px !important;
+  }
+}
+
+// 横向布局
+.is-horizontal {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .app-aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 240px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-right: 1px solid #e8e8e8;
+
+    & > .ng-layout-container {
+      width: 100%;
+    }
+  }
+
+  .app-header {
+    & > .ng-layout-container {
+      width: 100%;
+    }
+  }
+
+  app-body {
+    flex: 1;
+    margin-left: 240px;
+    overflow: auto;
+  }
+}
+
+.is-fluid {
+  .ng-layout-container {
+    width: 100% !important;
+  }
+}
+
+.is-fixed-header {
+  padding-top: 50px;
+
+  .app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+  }
+}
+
+.is-dark-aside {
+  .app-aside {
+    background: #232e3c;
+  }
+}
+
+.is-light-aside {
+  .app-aside {
+    background: #fff;
+  }
+}

@@ -1,6 +1,6 @@
 <div class="app-aside">
-  <div class="app-aside-list">
-    <ul nz-menu [nzInlineCollapsed]="collapsed" nzTheme="dark" nzMode="inline">
+  <div class="ng-layout-container">
+    <ul nz-menu [nzInlineCollapsed]="collapsed" [nzTheme]="menuTheme" [nzMode]="menuMode">
       <ng-container *ngTemplateOutlet="menuTpl; context: { $implicit: menus }"></ng-container>
       <ng-template #menuTpl let-menus>
         <ng-container *ngFor="let menu of menus">
@@ -36,7 +36,7 @@
     </ul>
   </div>
 
-  <div class="app-aside-collapsed">
+  <div *ngIf="menuMode === 'inline'" class="app-aside-collapsed">
     <div class="collapsed-icon" (click)="toggle()">
       <i nz-icon [nzType]="collapsed ? 'arrow-right' : 'arrow-left'" nzTheme="outline"></i>
     </div>

@@ -1,5 +1,7 @@
 import { Component, EventEmitter, OnInit, Input, Output } from "@angular/core";
-import { APP_MENUS } from "../../../config/app-menu";
+import { CONFIG } from "../../../config";
+import { IAppMenu } from "../../../config/app-menu";
+import { NzMenuModeType, NzMenuThemeType } from "ng-zorro-antd/menu";
 
 @Component({
   selector: "app-aside",
@@ -10,9 +12,15 @@ export class AppAsideComponent implements OnInit {
   @Input() collapsed: boolean | undefined;
   @Output() toggleCollapsed = new EventEmitter();
 
-  menus = APP_MENUS;
+  menus: IAppMenu;
+  menuTheme: NzMenuThemeType;
+  menuMode: NzMenuModeType = "vertical";
 
-  constructor() {}
+  constructor() {
+    this.menus = CONFIG.menus;
+    this.menuTheme = CONFIG.asideTheme;
+    this.menuMode = CONFIG.layout === "vertical" ? "horizontal" : "inline";
+  }
 
   ngOnInit() {}
 
