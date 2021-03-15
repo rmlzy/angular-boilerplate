@@ -1,9 +1,10 @@
-<button nz-button [nzLoading]="loading" nzType="primary" (click)="fetchTodayOfHistory()">获取网络数据</button>
+<button nz-button [nzLoading]="loading" nzType="primary" (click)="fetchTodayOfHistory()">
+  获取网络数据
+</button>
 <button nz-button (click)="reset()">重置</button>
 
-<div *ngIf="result">
-  <hr>
+<div class="result-container" *ngIf="result">
   <code>
-    <pre>{{result}}</pre>
+    <pre>{{ result }}</pre>
   </code>
 </div>
