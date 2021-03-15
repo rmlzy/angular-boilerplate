@@ -10,11 +10,13 @@ import "../config/echart.theme";
 
 import { NgZorroAntdModule } from "./ng-zorro-antd.module";
 
+import { ExampleComponent } from "../components/example/example.component";
+
 echarts.use([TitleComponent, TooltipComponent, GridComponent, BarChart, CanvasRenderer]);
 
 @NgModule({
   imports: [CommonModule, NgZorroAntdModule, NgxEchartsModule.forRoot({ echarts })],
-  declarations: [],
-  exports: [NgZorroAntdModule, NgxEchartsModule],
+  declarations: [ExampleComponent],
+  exports: [NgZorroAntdModule, NgxEchartsModule, ExampleComponent],
 })
 export class SharedModule {}

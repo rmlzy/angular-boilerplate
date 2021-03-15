@@ -1,20 +1,40 @@
-<nz-table #basicTable nzSize="small" [nzBordered]="true" [nzData]="dataSource">
+<nz-table
+  #basicTable
+  nzSize="small"
+  nzTitle="远程加载数据表格"
+  [nzBordered]="true"
+  [nzFrontPagination]="false"
+  [nzShowSizeChanger]="true"
+  [nzShowTotal]="totalTemplate"
+  [nzLoading]="tableLoading"
+  [nzData]="tableData"
+  [nzPageSize]="tablePager.pageSize"
+  [nzPageIndex]="tablePager.pageIndex"
+  [nzTotal]="tablePager.total"
+  (nzQueryParams)="query($event)"
+>
   <thead>
-  <tr>
-    <th>Name</th>
-    <th>Age</th>
-    <th>Address</th>
-    <th>Action</th>
-  </tr>
+    <tr>
+      <th nzWidth="100px">ID</th>
+      <th nzWidth="200px">名称</th>
+      <th nzWidth="100px">年龄</th>
+      <th nzWidth="200px">邮箱</th>
+      <th>地址</th>
+      <th nzWidth="100px">操作</th>
+    </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let data of basicTable.data">
-    <td>{{ data.name }}</td>
-    <td>{{ data.age }}</td>
-    <td>{{ data.address }}</td>
-    <td>
-      <a>Edit</a>
-    </td>
-  </tr>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{ data.id }}</td>
+      <td>{{ data.name }}</td>
+      <td>{{ data.age }}</td>
+      <td>{{ data.email }}</td>
+      <td>{{ data.address }}</td>
+      <td>
+        <a>编辑</a>
+      </td>
+    </tr>
   </tbody>
+
+  <ng-template #totalTemplate let-total>共 {{ total }} 条数据</ng-template>
 </nz-table>
