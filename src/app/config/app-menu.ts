@@ -28,6 +28,9 @@ export const APP_MENUS: IAppMenu = [
     level: 1,
     title: "业务组件",
     icon: "smile",
-    children: [{ level: 2, title: "简易表格", link: "/biz/simple-table" }],
+    children: [
+      { level: 2, title: "简易表格", link: "/biz/simple-table" },
+      { level: 2, title: "大数据表格", link: "/biz/bigdata-table" },
+    ],
   },
 ];
