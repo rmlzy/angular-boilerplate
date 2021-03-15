@@ -14,11 +14,16 @@ export const APP_MENUS: Menu[] = [
     title: "通用",
     icon: "appstore",
     children: [
-      { level: 2, title: "按钮", link: "/general/button" },
       { level: 2, title: "404", link: "/general/404" },
       { level: 2, title: "500", link: "/general/500" },
       { level: 2, title: "maintenance", link: "/general/maintenance" },
     ],
+  },
+  {
+    level: 1,
+    title: "Interface",
+    icon: "appstore",
+    children: [{ level: 2, title: "buttons", link: "/interface/buttons" }],
   },
   {
     level: 1,

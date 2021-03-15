@@ -15,6 +15,10 @@ const routes: Routes = [
         path: "general",
         loadChildren: () => import("./general/general.module").then((m) => m.GeneralModule),
       },
+      {
+        path: "interface",
+        loadChildren: () => import("./interface/interface.module").then((m) => m.InterfaceModule),
+      },
     ],
   },
   {
