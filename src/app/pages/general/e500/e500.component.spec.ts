@@ -1,16 +1,15 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { E500Component } from './e500.component';
+import { E500Component } from "./e500.component";
 
-describe('E500Component', () => {
+describe("E500Component", () => {
   let component: E500Component;
   let fixture: ComponentFixture<E500Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ E500Component ]
-    })
-    .compileComponents();
+      declarations: [E500Component],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('E500Component', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

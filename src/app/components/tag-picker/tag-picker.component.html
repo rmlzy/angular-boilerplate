@@ -1,0 +1,22 @@
+<nz-tag
+  *ngFor="let tag of innerValue; let i = index"
+  [nzMode]="disabled ? 'default' : 'closeable'"
+  (nzOnClose)="remove(tag)"
+>
+  {{ tag }}
+</nz-tag>
+<nz-tag *ngIf="!disabled && !inputVisible" class="editable-tag" nzNoAnimation (click)="showInput()">
+  <i nz-icon nzType="plus"></i>
+  添加标签
+</nz-tag>
+<input
+  #inputElement
+  nz-input
+  nzSize="small"
+  type="text"
+  style="width: 78px"
+  *ngIf="inputVisible"
+  [(ngModel)]="inputValue"
+  (blur)="confirm()"
+  (keydown.enter)="confirm()"
+/>

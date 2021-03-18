@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { TypographyComponent } from "./typography.component";
+import { CustomComponentsComponent } from "./custom-components.component";
 
-describe("TypographyComponent", () => {
-  let component: TypographyComponent;
-  let fixture: ComponentFixture<TypographyComponent>;
+describe("CustomComponentsComponent", () => {
+  let component: CustomComponentsComponent;
+  let fixture: ComponentFixture<CustomComponentsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TypographyComponent],
+      declarations: [CustomComponentsComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TypographyComponent);
+    fixture = TestBed.createComponent(CustomComponentsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

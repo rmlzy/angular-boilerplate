@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { TypographyComponent } from "./typography.component";
+import { TagPickerComponent } from "./tag-picker.component";
 
-describe("TypographyComponent", () => {
-  let component: TypographyComponent;
-  let fixture: ComponentFixture<TypographyComponent>;
+describe("TagPickerComponent", () => {
+  let component: TagPickerComponent;
+  let fixture: ComponentFixture<TagPickerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TypographyComponent],
+      declarations: [TagPickerComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TypographyComponent);
+    fixture = TestBed.createComponent(TagPickerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

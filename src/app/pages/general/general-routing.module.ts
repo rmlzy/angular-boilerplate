@@ -6,6 +6,7 @@ import { MaintenanceComponent } from "./maintenance/maintenance.component";
 import { AjaxComponent } from "./ajax/ajax.component";
 import { ButtonsComponent } from "./buttons/buttons.component";
 import { TypographyComponent } from "./typography/typography.component";
+import { CustomComponentsComponent } from "./custom-components/custom-components.component";
 
 const routes: Routes = [
   { path: "typography", component: TypographyComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: "500", component: E500Component },
   { path: "maintenance", component: MaintenanceComponent },
   { path: "ajax", component: AjaxComponent },
+  { path: "custom-components", component: CustomComponentsComponent },
 ];
 
 @NgModule({

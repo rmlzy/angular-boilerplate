@@ -22,6 +22,7 @@ export const APP_MENUS: IAppMenu = [
       { level: 2, title: "500", link: "/general/500" },
       { level: 2, title: "Maintenance", link: "/general/maintenance" },
       { level: 2, title: "Ajax", link: "/general/ajax" },
+      { level: 2, title: "Custom Components", link: "/general/custom-components" },
     ],
   },
   {

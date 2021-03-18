@@ -9,6 +9,7 @@ import { MaintenanceComponent } from "./maintenance/maintenance.component";
 import { AjaxComponent } from "./ajax/ajax.component";
 import { ButtonsComponent } from "./buttons/buttons.component";
 import { TypographyComponent } from "./typography/typography.component";
+import { CustomComponentsComponent } from "./custom-components/custom-components.component";
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TypographyComponent } from "./typography/typography.component";
     AjaxComponent,
     ButtonsComponent,
     TypographyComponent,
+    CustomComponentsComponent,
   ],
   imports: [CommonModule, SharedModule, GeneralRoutingModule],
 })
