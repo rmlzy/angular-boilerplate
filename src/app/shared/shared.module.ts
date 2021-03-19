@@ -19,7 +19,6 @@ echarts.use([TitleComponent, TooltipComponent, GridComponent, BarChart, CanvasRe
   imports: [CommonModule, FormsModule, NgZorroAntdModule, NgxEchartsModule.forRoot({ echarts })],
   declarations: [ExampleComponent, TagPickerComponent],
   exports: [FormsModule, NgZorroAntdModule, NgxEchartsModule, ExampleComponent, TagPickerComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class SharedModule {
-}
+export class SharedModule {}
