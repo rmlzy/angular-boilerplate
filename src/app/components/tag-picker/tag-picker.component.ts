@@ -61,8 +61,8 @@ export class TagPickerComponent implements ControlValueAccessor {
 
   confirm() {
     if (this.inputValue) {
-      const idx = this.inputValue.indexOf(this.inputValue);
-      if (idx !== -1) {
+      const idx = this.innerValue.indexOf(this.inputValue);
+      if (idx === -1) {
         this.value = [...this.innerValue, this.inputValue];
       }
     }

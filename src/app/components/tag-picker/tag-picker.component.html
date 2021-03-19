@@ -5,10 +5,11 @@
 >
   {{ tag }}
 </nz-tag>
-<nz-tag *ngIf="!disabled && !inputVisible" class="editable-tag" nzNoAnimation (click)="showInput()">
-  <i nz-icon nzType="plus"></i>
-  添加标签
+
+<nz-tag *ngIf="!disabled && !inputVisible" nzNoAnimation (click)="showInput()">
+  <i nz-icon nzType="plus"></i>添加标签
 </nz-tag>
+
 <input
   #inputElement
   nz-input
