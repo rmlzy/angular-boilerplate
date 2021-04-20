@@ -1,4 +1,9 @@
 <div class="app-aside">
+  <a class="brand" routerLink="/">
+    <img height="30" src="assets/images/logo.svg" alt="" />
+    <span class="brand-name">NG Admin</span>
+  </a>
+
   <div class="ng-layout-container">
     <ul nz-menu [nzInlineCollapsed]="collapsed" [nzTheme]="menuTheme" [nzMode]="menuMode">
       <ng-container *ngTemplateOutlet="menuTpl; context: { $implicit: menus }"></ng-container>
