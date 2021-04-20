@@ -1176,20 +1176,6 @@
     "merge-source-map" "^1.1.0"
     "schema-utils" "^2.7.0"
 
-"@ng-util/lazy@^10.0.0":
-  "integrity" "sha512-4VPUTU+I8FT6T3/2zVqw3IGuSh2quJgzxFNnfMpG9tRwrM5Guqv2/mQrneBHBosqxkt0EaIKbd7eIDky78VEPA=="
-  "resolved" "https://registry.npmjs.org/@ng-util/lazy/-/lazy-10.2.2.tgz"
-  "version" "10.2.2"
-  dependencies:
-    "tslib" "^2.0.0"
-
-"@ng-util/util@^10.0.0":
-  "integrity" "sha512-Rgi/GTsZav8xS+pmwE+8tKA1HaIpusl/fCFUgZjMxomixTKOntdUgpcNYoUuIAi3CaTcn/kM8DDtxJeBQlcyUQ=="
-  "resolved" "https://registry.npmjs.org/@ng-util/util/-/util-10.2.2.tgz"
-  "version" "10.2.2"
-  dependencies:
-    "tslib" "^2.0.0"
-
 "@ngtools/webpack@11.2.4":
   "integrity" "sha512-BVhYydfYGZuLXcTpzWeI9ONguwnkCmxP6lRIEyvRYTuGshSsK8v5itBrect7D1cIxnT/a+aZbVWIF1qWeQdepw=="
   "resolved" "https://registry.npmjs.org/@ngtools/webpack/-/webpack-11.2.4.tgz"
@@ -2665,11 +2651,6 @@
   "version" "1.0.8"
   dependencies:
     "delayed-stream" "~1.0.0"
-
-"commander@*":
-  "integrity" "sha512-SEa2abMBTZuEjLVYpNrAFoRgxPwG4rXP3+SGY6CM/HZGeDzIA7Pzp+7H3AHDukKEpyy2SoSGGPShKqqfH9T9AQ=="
-  "resolved" "https://registry.npmjs.org/commander/-/commander-4.0.0.tgz"
-  "version" "4.0.0"
 
 "commander@^2.11.0":
   "integrity" "sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ=="
@@ -5914,13 +5895,6 @@
   dependencies:
     "minimist" "^1.2.5"
 
-"mockjs@^1.1.0":
-  "integrity" "sha512-eQsKcWzIaZzEZ07NuEyO4Nw65g0hdWAyurVol1IPl1gahRwY+svqzfgfey8U8dahLwG44d6/RwEzuK52rSa/JQ=="
-  "resolved" "https://registry.npmjs.org/mockjs/-/mockjs-1.1.0.tgz"
-  "version" "1.1.0"
-  dependencies:
-    "commander" "*"
-
 "move-concurrently@^1.0.1":
   "integrity" "sha1-viwAX9oy4LKa8fBdfEszIUxwH5I="
   "resolved" "https://registry.npmjs.org/move-concurrently/-/move-concurrently-1.0.1.tgz"
@@ -6028,27 +6002,11 @@
     "resize-observer-polyfill" "^1.5.1"
     "tslib" "^2.0.0"
 
-"ngx-amap@^3.0.5":
-  "integrity" "sha512-gLoNLVHWcYiXYojNOX7VaR+nlRwA3zCzvOQrjFk9g4athPn5GnyDGVoPyYBmL7o2M1kHORMTrqqMqp+OjdlRwg=="
-  "resolved" "https://registry.npmjs.org/ngx-amap/-/ngx-amap-3.0.5.tgz"
-  "version" "3.0.5"
-  dependencies:
-    "tslib" "^1.9.0"
-
 "ngx-echarts@^6.0.1":
   "integrity" "sha512-a9MZ8cHC7oD+c6Tl0ABAEM2inD+k4FHhuu7RnH6/34c10TJ7AFeQwrFbP6BgW39M9gViWozAjCRFmrvWOYv2Wg=="
   "resolved" "https://registry.npmjs.org/ngx-echarts/-/ngx-echarts-6.0.1.tgz"
   "version" "6.0.1"
   dependencies:
-    "tslib" "^2.0.0"
-
-"ngx-ueditor@^11.0.1":
-  "integrity" "sha512-GjEZgr/r9w7bDlWAazozeI1y87pBQNPgG0xksC8hFfzhe3+wL3C8qxZwWIaw5BpA5JPlhE2Q3DqOdBXNBtcfPQ=="
-  "resolved" "https://registry.npmjs.org/ngx-ueditor/-/ngx-ueditor-11.0.1.tgz"
-  "version" "11.0.1"
-  dependencies:
-    "@ng-util/lazy" "^10.0.0"
-    "@ng-util/util" "^10.0.0"
     "tslib" "^2.0.0"
 
 "nice-try@^1.0.4":

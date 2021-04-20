@@ -19,7 +19,9 @@
 @primary-2: color(~`colorPalette("@{primary-color}", 2) `); // replace tint(@primary-color, 80%)
 @primary-3: color(~`colorPalette("@{primary-color}", 3) `); // unused
 @primary-4: color(~`colorPalette("@{primary-color}", 4) `); // unused
-@primary-5: color(~`colorPalette("@{primary-color}", 5) `); // color used to control the text color in many active and hover states, replace tint(@primary-color, 20%)
+@primary-5: color(
+  ~`colorPalette("@{primary-color}", 5) `
+); // color used to control the text color in many active and hover states, replace tint(@primary-color, 20%)
 @primary-6: @primary-color; // color used to control the text color of active buttons, don't use, use @primary-color
 @primary-7: color(~`colorPalette("@{primary-color}", 7) `); // replace shade(@primary-color, 5%)
 @primary-8: color(~`colorPalette("@{primary-color}", 8) `); // unused
@@ -33,8 +35,9 @@
 @body-background: #fff;
 // Base background color for most components
 @component-background: #fff;
-@font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif,
-"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+@font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+  "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 @code-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 @heading-color: fade(#000, 85%);
 @text-color: fade(#000, 65%);
@@ -70,8 +73,8 @@
 
 // LINK
 @link-color: @primary-color;
-@link-hover-color: color(~`colorPalette("@{link-color}", 5)`);
-@link-active-color: color(~`colorPalette("@{link-color}", 7)`);
+@link-hover-color: color(~`colorPalette("@{link-color}", 5) `);
+@link-active-color: color(~`colorPalette("@{link-color}", 7) `);
 @link-decoration: none;
 @link-hover-decoration: none;
 
@@ -92,7 +95,7 @@
 @ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
 
 // Border color
-@border-color-base: rgba(101, 109, 119, .16); // base border outline a component
+@border-color-base: rgba(101, 109, 119, 0.16); // base border outline a component
 @border-color-split: hsv(0, 0, 91%); // split border inside a component
 @border-width-base: 1px; // width of the border for a component
 @border-style-base: solid; // style of a components border
@@ -111,7 +114,7 @@
 @disabled-color-dark: fade(#fff, 35%);
 
 // Shadow
-@shadow-color: rgba(0, 0, 0, .15);
+@shadow-color: rgba(0, 0, 0, 0.15);
 @box-shadow-base: @shadow-1-down;
 @shadow-1-up: 0 -2px 8px @shadow-color;
 @shadow-1-down: 0 2px 8px @shadow-color;
@@ -320,7 +323,7 @@
 // ---
 @menu-inline-toplevel-item-height: 40px;
 @menu-item-height: 40px;
-@menu-collapsed-width: 50px;
+@menu-collapsed-width: 80px;
 @menu-bg: @component-background;
 @menu-popup-bg: @component-background;
 @menu-item-color: @text-color;
