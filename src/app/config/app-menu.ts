@@ -10,19 +10,19 @@ type IMenu = {
 export type IAppMenu = IMenu[];
 
 export const APP_MENUS: IAppMenu = [
-  { level: 1, title: "控制台", icon: "dashboard", link: "/" },
+  { level: 1, title: "Home", icon: "home", link: "/" },
   {
     level: 1,
-    title: "通用",
-    icon: "appstore",
+    title: "Interface",
+    icon: "inbox",
     children: [
-      { level: 2, title: "Typography", link: "/general/typography" },
-      { level: 2, title: "Buttons", link: "/general/buttons" },
-      { level: 2, title: "404", link: "/general/404" },
-      { level: 2, title: "500", link: "/general/500" },
-      { level: 2, title: "Maintenance", link: "/general/maintenance" },
-      { level: 2, title: "Ajax", link: "/general/ajax" },
-      { level: 2, title: "自定义组件", link: "/general/custom-components" },
+      { level: 2, title: "Typography", link: "/interface/typography" },
+      { level: 2, title: "Buttons", link: "/interface/buttons" },
+      { level: 2, title: "404", link: "/interface/404" },
+      { level: 2, title: "500", link: "/interface/500" },
+      { level: 2, title: "Maintenance", link: "/interface/maintenance" },
+      { level: 2, title: "Ajax", link: "/interface/ajax" },
+      { level: 2, title: "自定义组件", link: "/interface/custom-components" },
     ],
   },
 ];

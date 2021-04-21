@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
 import { SharedModule } from "../../shared/shared.module";
-import { GeneralRoutingModule } from "./general-routing.module";
+import { InterfaceRoutingModule } from "./interface-routing.module";
 import { E404Component } from "./e404/e404.component";
 import { E500Component } from "./e500/e500.component";
 import { MaintenanceComponent } from "./maintenance/maintenance.component";
@@ -21,6 +21,6 @@ import { CustomComponentsComponent } from "./custom-components/custom-components
     TypographyComponent,
     CustomComponentsComponent,
   ],
-  imports: [CommonModule, SharedModule, GeneralRoutingModule],
+  imports: [CommonModule, SharedModule, InterfaceRoutingModule],
 })
-export class GeneralModule {}
+export class InterfaceModule {}

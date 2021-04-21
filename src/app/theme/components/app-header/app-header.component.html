@@ -13,23 +13,26 @@
     </ul>
 
     <ul class="nav tools">
-      <li class="nav-icon">
-        <nz-badge [nzCount]="22">
-          <i nz-icon nzType="bell" nzTheme="outline"></i>
-        </nz-badge>
+      <li>
+        <a target="_blank" href="https://github.com/rmlzy/ng-tabler">
+          <button nz-button nzType="default">
+            <i nz-icon nzType="github" nzTheme="outline"></i>Source code
+          </button>
+        </a>
       </li>
-      <li class="nav-icon">
-        <i nz-icon nzType="message" nzTheme="outline"></i>
-      </li>
-      <li class="nav-icon">
-        <i nz-icon nzType="mail" nzTheme="outline"></i>
+      <li>
+        <button nz-button nzType="text">
+          <nz-badge [nzDot]="true">
+            <i nz-icon nzType="bell" nzTheme="outline"></i>
+          </nz-badge>
+        </button>
       </li>
     </ul>
 
     <div class="user">
       <div nz-dropdown [nzDropdownMenu]="menu" class="user-name">
-        <nz-avatar nzIcon="user"></nz-avatar>
-        <span>超级管理员</span>
+        <nz-avatar nzShape="square" nzSrc="assets/images/author.jpeg"></nz-avatar>
+        <span>rmlzy</span>
       </div>
       <nz-dropdown-menu #menu="nzDropdownMenu">
         <ul nz-menu nzSelectable>
