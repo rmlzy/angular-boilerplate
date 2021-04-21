@@ -1,6 +1,6 @@
 <div nz-row nzGutter="15">
   <div nz-col nzSpan="6">
-    <nz-card nzSize="small" class="stat">
+    <nz-card class="stat">
       <nz-statistic [nzValue]="(1949101 | number)!" [nzTitle]="'Active Users'"></nz-statistic>
       <div class="stat--progress">
         <nz-progress [nzPercent]="30"></nz-progress>
@@ -8,13 +8,13 @@
     </nz-card>
   </div>
   <div nz-col nzSpan="6">
-    <nz-card nzSize="small" class="stat">
+    <nz-card class="stat">
       <nz-statistic [nzValue]="(1949101 | number)!" [nzTitle]="'Active Users'"></nz-statistic>
       <div class="stat--chart" echarts [options]="chart1Options" theme="roma"></div>
     </nz-card>
   </div>
   <div nz-col nzSpan="6">
-    <nz-card nzSize="small" class="stat">
+    <nz-card class="stat">
       <nz-statistic [nzValue]="(1949101 | number)!" [nzTitle]="'Active Users'"></nz-statistic>
       <div class="stat--progress">
         <nz-progress [nzPercent]="30"></nz-progress>
@@ -22,7 +22,7 @@
     </nz-card>
   </div>
   <div nz-col nzSpan="6">
-    <nz-card nzSize="small" class="stat">
+    <nz-card class="stat">
       <nz-statistic [nzValue]="(1949101 | number)!" [nzTitle]="'Active Users'"></nz-statistic>
       <div class="stat--progress">
         <nz-progress [nzPercent]="30"></nz-progress>
@@ -33,7 +33,7 @@
 
 <div nz-row nzGutter="15">
   <div nz-col nzSpan="12">
-    <nz-card nzTitle="图表" nzSize="small">
+    <nz-card nzTitle="图表">
       <div echarts [options]="chart2Options" theme="roma"></div>
     </nz-card>
 
@@ -74,10 +74,10 @@
         </tbody>
       </nz-table>
     </div>
-    <nz-card nzSize="small">
+    <nz-card>
       <div class="carousel-demo">
         <nz-carousel nzEffect="scrollx">
-          <div nz-carousel-content *ngFor="let index of [0,1,2,3]">
+          <div nz-carousel-content *ngFor="let index of [0, 1, 2, 3]">
             <h3>{{ index }}</h3>
           </div>
         </nz-carousel>
@@ -86,14 +86,12 @@
   </div>
 </div>
 
-<nz-card nzSize="small">
+<nz-card>
   <nz-descriptions nzTitle="User Info" nzBordered>
     <nz-descriptions-item nzTitle="Product">Cloud Database</nz-descriptions-item>
     <nz-descriptions-item nzTitle="Billing Mode">Prepaid</nz-descriptions-item>
     <nz-descriptions-item nzTitle="Automatic Renewal">YES</nz-descriptions-item>
-    <nz-descriptions-item nzTitle="Order Time">
-      2018-04-24 18:00:00
-    </nz-descriptions-item>
+    <nz-descriptions-item nzTitle="Order Time"> 2018-04-24 18:00:00</nz-descriptions-item>
     <nz-descriptions-item nzTitle="Usage Time" [nzSpan]="2">
       2018-04-24 18:00:00 To 2019-04-24 18:00:00
     </nz-descriptions-item>

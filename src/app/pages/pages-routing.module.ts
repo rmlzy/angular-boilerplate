@@ -15,6 +15,10 @@ const routes: Routes = [
         path: "interface",
         loadChildren: () => import("./interface/interface.module").then((m) => m.InterfaceModule),
       },
+      {
+        path: "form",
+        loadChildren: () => import("./form/form.module").then((m) => m.FormModule),
+      },
     ],
   },
   {

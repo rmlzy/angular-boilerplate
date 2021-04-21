@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -7,6 +7,8 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./example.component.less"],
 })
 export class ExampleComponent implements OnInit {
+  @Input() theme = 'light';
+
   constructor() {}
 
   ngOnInit(): void {}

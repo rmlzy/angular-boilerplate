@@ -8,7 +8,15 @@ import { ButtonsComponent } from "./buttons/buttons.component";
 import { TypographyComponent } from "./typography/typography.component";
 import { CustomComponentsComponent } from "./custom-components/custom-components.component";
 
+import { EmptyComponent } from "./empty/empty.component";
+import { AccordionComponent } from "./accordion/accordion.component";
+import { BlankComponent } from "./blank/blank.component";
+
 const routes: Routes = [
+  { path: "empty", component: EmptyComponent },
+  { path: "accordion", component: AccordionComponent },
+  { path: "blank", component: BlankComponent },
+
   { path: "typography", component: TypographyComponent },
   { path: "buttons", component: ButtonsComponent },
   { path: "404", component: E404Component },

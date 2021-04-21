@@ -10,6 +10,9 @@ import { AjaxComponent } from "./ajax/ajax.component";
 import { ButtonsComponent } from "./buttons/buttons.component";
 import { TypographyComponent } from "./typography/typography.component";
 import { CustomComponentsComponent } from "./custom-components/custom-components.component";
+import { EmptyComponent } from "./empty/empty.component";
+import { AccordionComponent } from "./accordion/accordion.component";
+import { BlankComponent } from './blank/blank.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { CustomComponentsComponent } from "./custom-components/custom-components
     ButtonsComponent,
     TypographyComponent,
     CustomComponentsComponent,
+    EmptyComponent,
+    AccordionComponent,
+    BlankComponent,
   ],
   imports: [CommonModule, SharedModule, InterfaceRoutingModule],
 })
