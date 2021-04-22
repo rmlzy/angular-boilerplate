@@ -1,43 +1,89 @@
 <div nz-row nzGutter="15">
   <div nz-col nzSpan="6">
-    <nz-card class="stat">
-      <nz-statistic [nzValue]="(1949101 | number)!" [nzTitle]="'Active Users'"></nz-statistic>
+    <nz-card class="stat" nzTitle="SALES" [nzExtra]="extraTemplate">
+      <nz-statistic nzValue="75%"></nz-statistic>
       <div class="stat--progress">
-        <nz-progress [nzPercent]="30"></nz-progress>
+        <nz-progress
+          [nzPercent]="30"
+          nzStrokeLinecap="square"
+          nzStrokeColor="#206bc4"
+          nzStrokeWidth="4"
+        ></nz-progress>
       </div>
     </nz-card>
   </div>
   <div nz-col nzSpan="6">
-    <nz-card class="stat">
-      <nz-statistic [nzValue]="(1949101 | number)!" [nzTitle]="'Active Users'"></nz-statistic>
-      <div class="stat--chart" echarts [options]="chart1Options" theme="roma"></div>
+    <nz-card class="stat" nzTitle="REVENUE" [nzExtra]="extraTemplate">
+      <nz-statistic nzValue="$4,300"></nz-statistic>
+      <apx-chart
+        [chart]="revenueChart.chart"
+        [fill]="revenueChart.fill"
+        [stroke]="revenueChart.stroke"
+        [series]="revenueChart.series"
+        [grid]="revenueChart.grid"
+        [xaxis]="revenueChart.xaxis"
+        [yaxis]="revenueChart.yaxis"
+        [labels]="revenueChart.labels"
+        [colors]="revenueChart.colors"
+        [legend]="revenueChart.legend"
+      ></apx-chart>
     </nz-card>
   </div>
   <div nz-col nzSpan="6">
-    <nz-card class="stat">
-      <nz-statistic [nzValue]="(1949101 | number)!" [nzTitle]="'Active Users'"></nz-statistic>
-      <div class="stat--progress">
-        <nz-progress [nzPercent]="30"></nz-progress>
-      </div>
+    <nz-card class="stat" nzTitle="NEW CLIENTS" [nzExtra]="extraTemplate">
+      <nz-statistic nzValue="6,782"></nz-statistic>
+      <apx-chart
+        [chart]="newClientsChart.chart"
+        [fill]="newClientsChart.fill"
+        [stroke]="newClientsChart.stroke"
+        [series]="newClientsChart.series"
+        [grid]="newClientsChart.grid"
+        [xaxis]="newClientsChart.xaxis"
+        [yaxis]="newClientsChart.yaxis"
+        [labels]="newClientsChart.labels"
+        [colors]="newClientsChart.colors"
+        [legend]="newClientsChart.legend"
+      ></apx-chart>
     </nz-card>
   </div>
   <div nz-col nzSpan="6">
-    <nz-card class="stat">
-      <nz-statistic [nzValue]="(1949101 | number)!" [nzTitle]="'Active Users'"></nz-statistic>
-      <div class="stat--progress">
-        <nz-progress [nzPercent]="30"></nz-progress>
-      </div>
+    <nz-card class="stat" nzTitle="ACTIVE USERS">
+      <nz-statistic nzValue="2,986"></nz-statistic>
+      <apx-chart
+        [chart]="activeUserChart.chart"
+        [fill]="activeUserChart.fill"
+        [stroke]="newClientsChart.stroke"
+        [series]="activeUserChart.series"
+        [grid]="activeUserChart.grid"
+        [xaxis]="activeUserChart.xaxis"
+        [yaxis]="activeUserChart.yaxis"
+        [labels]="activeUserChart.labels"
+        [colors]="activeUserChart.colors"
+        [legend]="activeUserChart.legend"
+      ></apx-chart>
     </nz-card>
   </div>
 </div>
 
 <div nz-row nzGutter="15">
   <div nz-col nzSpan="12">
-    <nz-card nzTitle="图表">
-      <div echarts [options]="chart2Options" theme="roma"></div>
+    <nz-card nzTitle="Traffic summary" class="mb15">
+      <apx-chart
+        [chart]="mentionChart.chart"
+        [fill]="mentionChart.fill"
+        [series]="mentionChart.series"
+        [grid]="mentionChart.grid"
+        [xaxis]="mentionChart.xaxis"
+        [yaxis]="mentionChart.yaxis"
+        [labels]="mentionChart.labels"
+        [colors]="mentionChart.colors"
+        [legend]="mentionChart.legend"
+        [plotOptions]="mentionChart.plotOptions"
+        [dataLabels]="mentionChart.dataLabels"
+      ></apx-chart>
     </nz-card>
 
-    <div nz-row nzGutter="15" style="margin-top: 15px; margin-bottom: 0">
+    <div nz-row nzGutter="15">
       <div nz-col nzSpan="8">
         <nz-card>
           <nz-statistic [nzValue]="(1128 | number)!" [nzTitle]="'Feedback'"></nz-statistic>
@@ -54,26 +100,7 @@
         </nz-card>
       </div>
     </div>
-  </div>
-  <div nz-col nzSpan="12">
-    <div class="table-demo">
-      <nz-table #basicTable [nzData]="listOfData" [nzShowPagination]="false">
-        <thead>
-        <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Address</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let data of basicTable.data">
-          <td>{{ data.name }}</td>
-          <td>{{ data.age }}</td>
-          <td>{{ data.address }}</td>
-        </tr>
-        </tbody>
-      </nz-table>
-    </div>
+
     <nz-card>
       <div class="carousel-demo">
         <nz-carousel nzEffect="scrollx">
@@ -82,6 +109,41 @@
           </div>
         </nz-carousel>
       </div>
+    </nz-card>
+  </div>
+  <div nz-col nzSpan="12">
+    <nz-card nzTitle="Development activity" [nzBodyStyle]="{ padding: 0 }">
+      <apx-chart
+        [chart]="developChart.chart"
+        [dataLabels]="mentionChart.dataLabels"
+        [fill]="developChart.fill"
+        [stroke]="newClientsChart.stroke"
+        [series]="developChart.series"
+        [grid]="developChart.grid"
+        [xaxis]="developChart.xaxis"
+        [yaxis]="developChart.yaxis"
+        [labels]="developChart.labels"
+        [colors]="developChart.colors"
+        [legend]="developChart.legend"
+      ></apx-chart>
+      <nz-table #basicTable nzSize="small" [nzData]="demoTable" [nzShowPagination]="false">
+        <thead>
+          <tr>
+            <th>USER</th>
+            <th>COMMIT</th>
+            <th>DATE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of basicTable.data">
+            <td>
+              <nz-avatar nzShape="square" nzSrc="assets/images/author.jpeg"></nz-avatar>
+            </td>
+            <td>{{ data.commit }}</td>
+            <td>{{ data.date }}</td>
+          </tr>
+        </tbody>
+      </nz-table>
     </nz-card>
   </div>
 </div>
@@ -116,3 +178,17 @@
     </nz-descriptions-item>
   </nz-descriptions>
 </nz-card>
+
+<ng-template #extraTemplate>
+  <a nz-dropdown [nzDropdownMenu]="menu">
+    Last 7 days
+    <i nz-icon nzType="down"></i>
+  </a>
+  <nz-dropdown-menu #menu="nzDropdownMenu">
+    <ul nz-menu nzSelectable>
+      <li nz-menu-item>Last 7 days</li>
+      <li nz-menu-item>Last 30 days</li>
+      <li nz-menu-item>Last 3 months</li>
+    </ul>
+  </nz-dropdown-menu>
+</ng-template>

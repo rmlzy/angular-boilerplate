@@ -39,7 +39,7 @@
               }
             ],
             "styles": ["src/assets/styles/ng-zorro.less", "src/assets/styles/global.less"],
-            "scripts": []
+            "scripts": ["node_modules/apexcharts/dist/apexcharts.min.js"]
           },
           "configurations": {
             "production": {

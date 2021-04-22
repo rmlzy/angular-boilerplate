@@ -20,9 +20,9 @@
     "@angular/platform-browser": "~11.2.5",
     "@angular/platform-browser-dynamic": "~11.2.5",
     "@angular/router": "~11.2.5",
-    "echarts": "^5.0.2",
+    "apexcharts": "^3.26.1",
+    "ng-apexcharts": "^1.5.9",
     "ng-zorro-antd": "^11.2.0",
-    "ngx-echarts": "^6.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
