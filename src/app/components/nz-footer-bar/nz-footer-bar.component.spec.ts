@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { NgCardComponent } from "./ng-card.component";
+import { NzFooterBarComponent } from "./nz-footer-bar.component";
 
-describe("NgCardComponent", () => {
-  let component: NgCardComponent;
-  let fixture: ComponentFixture<NgCardComponent>;
+describe("NzFooterBarComponent", () => {
+  let component: NzFooterBarComponent;
+  let fixture: ComponentFixture<NzFooterBarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NgCardComponent],
+      declarations: [NzFooterBarComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgCardComponent);
+    fixture = TestBed.createComponent(NzFooterBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

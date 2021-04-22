@@ -3,9 +3,9 @@ import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NgApexchartsModule } from "ng-apexcharts";
 import { NgZorroAntdModule } from "./ng-zorro-antd.module";
-import { ExampleComponent, TagPickerComponent, NgCardComponent } from "../components";
+import { ExampleComponent, TagPickerComponent, NzFooterBarComponent } from "../components";
 
-const globalCmpts = [ExampleComponent, TagPickerComponent, NgCardComponent];
+const globalCmpts = [ExampleComponent, TagPickerComponent, NzFooterBarComponent];
 
 @NgModule({
   imports: [CommonModule, FormsModule, ReactiveFormsModule, NgZorroAntdModule, NgApexchartsModule],

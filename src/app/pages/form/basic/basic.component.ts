@@ -16,6 +16,7 @@ export class BasicComponent implements OnInit {
   ngOnInit() {
     this.loginForm = this.fb.group({
       title: ["", [Validators.required]],
+      range: [null, [Validators.required]],
       goal: ["", [Validators.required]],
       standard: ["", [Validators.required]],
       client: [""],

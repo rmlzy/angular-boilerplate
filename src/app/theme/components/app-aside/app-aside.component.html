@@ -1,6 +1,7 @@
 <div class="app-aside">
   <a class="brand" routerLink="/">
-    <img width="110" height="32" src="assets/images/logo-white.svg" alt="" />
+    <img *ngIf="collapsed" width="110" height="32" src="assets/images/logo-small-white.svg" />
+    <img *ngIf="!collapsed" width="110" height="32" src="assets/images/logo-white.svg" />
   </a>
 
   <div class="ng-layout-container">
@@ -11,7 +12,7 @@
           <li
             *ngIf="!menu.children"
             nz-menu-item
-            [nzPaddingLeft]="menu.level * 24"
+            [nzPaddingLeft]="menu.level * 16"
             [nzDisabled]="menu.disabled"
             [nzSelected]="menu.selected"
           >
@@ -23,7 +24,7 @@
           <li
             *ngIf="menu.children"
             nz-submenu
-            [nzPaddingLeft]="menu.level * 24"
+            [nzPaddingLeft]="menu.level * 16"
             [nzOpen]="menu.open"
             [nzTitle]="menu.title"
             [nzIcon]="menu.icon"
@@ -42,7 +43,7 @@
 
   <div *ngIf="menuMode === 'inline'" class="app-aside-collapsed">
     <div class="collapsed-icon" (click)="toggle()">
-      <i nz-icon [nzType]="collapsed ? 'arrow-right' : 'arrow-left'" nzTheme="outline"></i>
+      <i nz-icon [nzType]="collapsed ? 'menu-fold' : 'menu-unfold'" nzTheme="outline"></i>
     </div>
   </div>
 </div>

@@ -1,5 +1,5 @@
 @aside-width: 240px;
-@aside-mini-width: 80px;
+@aside-mini-width: 48px;
 
 .ng-layout {
   display: flex;
@@ -13,7 +13,8 @@
     margin: 0 auto;
   }
 
-  .app-header {
+  .app-header,
+  .nz-footer-bar {
     width: calc(100% - @aside-width);
   }
 }
@@ -41,14 +42,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     border-right: 1px solid #e8e8e8;
-
-    & > .ng-layout-container {
-      width: 100%;
-    }
-  }
-
-  .app-header {
-    margin-left: @aside-width;
+    z-index: 200;
 
     & > .ng-layout-container {
       width: 100%;
@@ -62,14 +56,10 @@
 
   .app-aside {
     width: @aside-mini-width;
-
-    .brand-name {
-      display: none;
-    }
   }
 
-  .app-header {
-    margin-left: @aside-mini-width;
+  .app-header,
+  .nz-footer-bar {
     width: calc(100% - @aside-mini-width);
   }
 }
@@ -86,7 +76,7 @@
   .app-header {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 20;
   }
 }
