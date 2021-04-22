@@ -3,7 +3,7 @@ import { Component, OnInit } from "@angular/core";
 @Component({
   selector: "app-buttons",
   templateUrl: "./buttons.component.html",
-  styleUrls: ["./buttons.component.less"]
+  styleUrls: ["./buttons.component.less"],
 })
 export class ButtonsComponent implements OnInit {
   standardCode = `<button nz-button nzType="primary">Primary Button</button>
@@ -50,9 +50,7 @@ export class ButtonsComponent implements OnInit {
   <i nz-icon nzType="download"></i>
 </button>`;
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }

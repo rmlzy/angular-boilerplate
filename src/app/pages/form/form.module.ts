@@ -7,7 +7,6 @@ import { BasicComponent } from "./basic/basic.component";
 
 @NgModule({
   declarations: [BasicComponent],
-  imports: [CommonModule, SharedModule, FormRoutingModule]
+  imports: [CommonModule, SharedModule, FormRoutingModule],
 })
-export class FormModule {
-}
+export class FormModule {}

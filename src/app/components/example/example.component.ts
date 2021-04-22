@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from "@angular/core";
   styleUrls: ["./example.component.less"],
 })
 export class ExampleComponent implements OnInit {
-  @Input() theme = 'light';
+  @Input() theme = "light";
 
   constructor() {}
 

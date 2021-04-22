@@ -31,8 +31,6 @@ export const APP_MENUS: IAppMenu = [
     level: 1,
     title: "Form",
     icon: "form",
-    children: [
-      { level: 2, title: "Basic form", link: "/form/basic" },
-    ],
+    children: [{ level: 2, title: "Basic form", link: "/form/basic" }],
   },
 ];

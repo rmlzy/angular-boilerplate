@@ -12,7 +12,7 @@ import { TypographyComponent } from "./typography/typography.component";
 import { CustomComponentsComponent } from "./custom-components/custom-components.component";
 import { EmptyComponent } from "./empty/empty.component";
 import { AccordionComponent } from "./accordion/accordion.component";
-import { BlankComponent } from './blank/blank.component';
+import { BlankComponent } from "./blank/blank.component";
 
 @NgModule({
   declarations: [

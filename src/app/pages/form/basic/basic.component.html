@@ -1,1 +1,102 @@
-<p>basic works!</p>
+<nz-page-header nzTitle="Basic Form">
+  <nz-breadcrumb nz-page-header-breadcrumb>
+    <nz-breadcrumb-item>
+      <a routerLink="/">Home</a>
+    </nz-breadcrumb-item>
+    <nz-breadcrumb-item>
+      <a routerLink="/form">Form</a>
+    </nz-breadcrumb-item>
+    <nz-breadcrumb-item>Basic Form</nz-breadcrumb-item>
+  </nz-breadcrumb>
+  <nz-page-header-content>
+    Form pages are used to collect or verify information to users, and basic forms are common in
+    scenarios where there are fewer data items.
+  </nz-page-header-content>
+</nz-page-header>
+
+<nz-card>
+  <form nz-form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <nz-form-item>
+      <nz-form-label [nzSm]="7" nzRequired>Title</nz-form-label>
+      <nz-form-control [nzSm]="10" nzErrorTip="Please enter a title">
+        <input nz-input formControlName="title" placeholder="Give the target a name" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSm]="7" nzRequired>Goal description</nz-form-label>
+      <nz-form-control [nzSm]="10" nzErrorTip="Please enter a description of the goal">
+        <textarea
+          nz-input
+          [nzAutosize]="{ minRows: 4, maxRows: 6 }"
+          formControlName="goal"
+          placeholder="Please enter your work goals"
+        ></textarea>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSm]="7" nzRequired>Metrics</nz-form-label>
+      <nz-form-control [nzSm]="10" nzErrorTip="Please enter a metric">
+        <textarea
+          nz-input
+          [nzAutosize]="{ minRows: 4, maxRows: 6 }"
+          formControlName="standard"
+          placeholder="Please enter a metric"
+        ></textarea>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSm]="7">Client</nz-form-label>
+      <nz-form-control [nzSm]="10">
+        <input
+          nz-input
+          formControlName="client"
+          placeholder="Please describe your customer service, internal customers directly @ Name / job number"
+        />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSm]="7">Inviting critics</nz-form-label>
+      <nz-form-control [nzSm]="10">
+        <input
+          nz-input
+          formControlName="invites"
+          placeholder="Please direct @ Name / job number, you can invite up to 5 people"
+        />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSm]="7">Weight</nz-form-label>
+      <nz-form-control [nzSm]="10">
+        <nz-input-number
+          style="width: 200px"
+          formControlName="weight"
+          nzPlaceHolder="Please enter weight"
+        ></nz-input-number>
+        <span>%</span>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSm]="7">Target disclosure</nz-form-label>
+      <nz-form-control [nzSm]="10" nzExtra="Customers and invitees are shared by default">
+        <nz-radio-group formControlName="publicType">
+          <label nz-radio nzValue="1">Public</label>
+          <label nz-radio nzValue="2">Partial public</label>
+          <label nz-radio nzValue="3">Private</label>
+        </nz-radio-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item nz-row>
+      <nz-form-control [nzOffset]="7">
+        <button nz-button nzType="primary" type="submit" class="mr15">Submit</button>
+        <button nz-button type="button">Save</button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</nz-card>
