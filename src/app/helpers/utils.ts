@@ -8,3 +8,11 @@ const removeNgTag = (nativeElement: HTMLElement): void => {
   }
   parentElement.removeChild(nativeElement);
 };
+
+export const getPathFromUrl = (url: string): string => {
+  const idx = url.indexOf("?");
+  if (idx === -1) {
+    return url;
+  }
+  return url.substring(0, idx);
+};

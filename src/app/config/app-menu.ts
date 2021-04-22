@@ -3,6 +3,8 @@ type IMenu = {
   title: string;
   icon?: string;
   link?: string;
+  open?: boolean;
+  selected?: boolean;
   disabled?: boolean;
   children?: IMenu[];
 };
