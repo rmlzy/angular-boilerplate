@@ -1,16 +1,44 @@
 .app-aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-right: 1px solid #e8e8e8;
+  z-index: 200;
+  padding-top: 64px;
+  padding-bottom: 50px;
+
+  &__brand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px 24px;
+    color: #fff;
+  }
+
+  &__menu {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
   &.collapsed {
     width: 50px;
   }
 
-  &-collapsed {
+  &__collapsed {
     position: absolute;
     left: 0;
     bottom: 0;
+    z-index: 300;
     width: 100%;
     height: 50px;
     color: #fff;
-    background: rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -23,14 +51,5 @@
       align-items: center;
       justify-content: center;
     }
-  }
-
-  .brand {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 16px 24px;
-    color: #fff;
   }
 }

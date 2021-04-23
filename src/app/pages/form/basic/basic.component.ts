@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
 import { NzFormTooltipIcon } from "ng-zorro-antd/form";
+import { NzMessageService } from "ng-zorro-antd/message";
 
 @Component({
   selector: "app-basic",
@@ -9,12 +10,12 @@ import { NzFormTooltipIcon } from "ng-zorro-antd/form";
 })
 export class BasicComponent implements OnInit {
   submitting = false;
-  loginForm!: FormGroup;
+  basicForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private message: NzMessageService) {}
 
   ngOnInit() {
-    this.loginForm = this.fb.group({
+    this.basicForm = this.fb.group({
       title: ["", [Validators.required]],
       range: [null, [Validators.required]],
       goal: ["", [Validators.required]],
@@ -27,9 +28,14 @@ export class BasicComponent implements OnInit {
   }
 
   async submit(): Promise<void> {
-    for (const i in this.loginForm.controls) {
-      this.loginForm.controls[i].markAsDirty();
-      this.loginForm.controls[i].updateValueAndValidity();
+    for (const i in this.basicForm.controls) {
+      this.basicForm.controls[i].markAsDirty();
+      this.basicForm.controls[i].updateValueAndValidity();
     }
+    if (!this.basicForm.valid) {
+      return;
+    }
+    console.log("Basic Form 提交:", this.basicForm.value);
+    this.message.success("操作成功");
   }
 }

@@ -1,11 +1,11 @@
 <div class="app-aside">
-  <a class="brand" routerLink="/">
+  <a class="app-aside__brand" routerLink="/">
     <img *ngIf="collapsed" width="110" height="32" src="assets/images/logo-small-white.svg" />
     <img *ngIf="!collapsed" width="110" height="32" src="assets/images/logo-white.svg" />
   </a>
 
-  <div class="ng-layout-container">
-    <ul nz-menu [nzInlineCollapsed]="collapsed" [nzTheme]="menuTheme" [nzMode]="menuMode">
+  <div class="app-aside__menu">
+    <ul nz-menu [nzInlineCollapsed]="collapsed" [nzTheme]="menuTheme" nzMode="inline">
       <ng-container *ngTemplateOutlet="menuTpl; context: { $implicit: menus }"></ng-container>
       <ng-template #menuTpl let-menus>
         <ng-container *ngFor="let menu of menus">
@@ -41,7 +41,7 @@
     </ul>
   </div>
 
-  <div *ngIf="menuMode === 'inline'" class="app-aside-collapsed">
+  <div class="app-aside__collapsed">
     <div class="collapsed-icon" (click)="toggle()">
       <i nz-icon [nzType]="collapsed ? 'menu-fold' : 'menu-unfold'" nzTheme="outline"></i>
     </div>

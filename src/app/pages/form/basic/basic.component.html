@@ -1,21 +1,20 @@
-<nz-page-header nzTitle="Basic Form">
+<nz-page-header nzTitle="基础表单">
   <nz-breadcrumb nz-page-header-breadcrumb>
     <nz-breadcrumb-item>
-      <a routerLink="/">Home</a>
+      <a routerLink="/">首页</a>
     </nz-breadcrumb-item>
     <nz-breadcrumb-item>
-      <a routerLink="/form">Form</a>
+      <a routerLink="/form">表单页</a>
     </nz-breadcrumb-item>
-    <nz-breadcrumb-item>Basic Form</nz-breadcrumb-item>
+    <nz-breadcrumb-item>基础表单</nz-breadcrumb-item>
   </nz-breadcrumb>
   <nz-page-header-content>
-    Form pages are used to collect or verify information to users, and basic forms are common in
-    scenarios where there are fewer data items.
+    表单页用于向用户收集或验证信息，基础表单常见于数据项较少的表单场景。
   </nz-page-header-content>
 </nz-page-header>
 
 <nz-card>
-  <form nz-form [formGroup]="loginForm" (ngSubmit)="submit()">
+  <form nz-form [formGroup]="basicForm" (ngSubmit)="submit()">
     <nz-form-item>
       <nz-form-label [nzSm]="7" nzRequired>Title</nz-form-label>
       <nz-form-control [nzSm]="10" nzErrorTip="Please enter a title">

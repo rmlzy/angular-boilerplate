@@ -13,44 +13,15 @@
     margin: 0 auto;
   }
 
-  .app-header,
+  .app-aside {
+    width: @aside-width;
+  }
+
   .nz-footer-bar {
     width: calc(100% - @aside-width);
   }
 }
 
-// 垂直布局
-.is-vertical {
-  .app-aside {
-    border-bottom: 1px solid #e8e8e8;
-    overflow-y: hidden;
-  }
-}
-
-// 横向布局
-.is-horizontal {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-
-  .app-aside {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: @aside-width;
-    overflow-x: hidden;
-    overflow-y: auto;
-    border-right: 1px solid #e8e8e8;
-    z-index: 200;
-
-    & > .ng-layout-container {
-      width: 100%;
-    }
-  }
-}
-
-// 侧栏折叠
 .is-collapsed {
   padding-left: @aside-mini-width;
 
@@ -58,7 +29,6 @@
     width: @aside-mini-width;
   }
 
-  .app-header,
   .nz-footer-bar {
     width: calc(100% - @aside-mini-width);
   }
@@ -78,6 +48,13 @@
     top: 0;
     right: 0;
     z-index: 20;
+    width: calc(100% - @aside-width);
+  }
+
+  &.is-collapsed {
+    .app-header {
+      width: calc(100% - @aside-mini-width);
+    }
   }
 }
 

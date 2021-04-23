@@ -3,17 +3,17 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { NzMessageService } from "ng-zorro-antd/message";
 
 @Component({
-  selector: "app-advanced",
-  templateUrl: "./advanced.component.html",
-  styleUrls: ["./advanced.component.less"],
+  selector: "app-settings",
+  templateUrl: "./settings.component.html",
+  styleUrls: ["./settings.component.less"],
 })
-export class AdvancedComponent implements OnInit {
-  advancedForm!: FormGroup;
+export class SettingsComponent implements OnInit {
+  settingForm!: FormGroup;
 
   constructor(private fb: FormBuilder, private message: NzMessageService) {}
 
-  ngOnInit() {
-    this.advancedForm = this.fb.group({
+  ngOnInit(): void {
+    this.settingForm = this.fb.group({
       repoName: ["", [Validators.required]],
       repoUrl: ["", [Validators.required]],
       repoOwner: ["", [Validators.required]],
@@ -31,14 +31,14 @@ export class AdvancedComponent implements OnInit {
   }
 
   async submit(): Promise<void> {
-    for (const i in this.advancedForm.controls) {
-      this.advancedForm.controls[i].markAsDirty();
-      this.advancedForm.controls[i].updateValueAndValidity();
+    for (const i in this.settingForm.controls) {
+      this.settingForm.controls[i].markAsDirty();
+      this.settingForm.controls[i].updateValueAndValidity();
     }
-    if (!this.advancedForm.valid) {
+    if (!this.settingForm.valid) {
       return;
     }
-    console.log("Advanced Form 提交:", this.advancedForm.value);
+    console.log("Advanced Form 提交:", this.settingForm.value);
     this.message.success("操作成功");
   }
 }

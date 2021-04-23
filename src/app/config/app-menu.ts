@@ -12,10 +12,10 @@ type IMenu = {
 export type IAppMenu = IMenu[];
 
 export const APP_MENUS: IAppMenu = [
-  { level: 1, title: "Home", icon: "home", link: "/" },
+  { level: 1, title: "首页", icon: "home", link: "/" },
   {
     level: 1,
-    title: "Interface",
+    title: "控件",
     icon: "inbox",
     children: [
       { level: 2, title: "Empty page", link: "/interface/empty" },
@@ -31,11 +31,17 @@ export const APP_MENUS: IAppMenu = [
   },
   {
     level: 1,
-    title: "Form",
+    title: "表单页",
     icon: "form",
     children: [
-      { level: 2, title: "Basic form", link: "/form/basic" },
-      { level: 2, title: "Advanced form", link: "/form/advanced" },
+      { level: 2, title: "基础表单", link: "/form/basic" },
+      { level: 2, title: "高级表单", link: "/form/advanced" },
     ],
+  },
+  {
+    level: 1,
+    title: "个人页",
+    icon: "user",
+    children: [{ level: 2, title: "个人设置", link: "/account/settings" }],
   },
 ];

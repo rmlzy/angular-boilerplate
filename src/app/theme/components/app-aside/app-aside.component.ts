@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Input, Output } from "@angular/core";
 import { NavigationEnd, Router } from "@angular/router";
-import { NzMenuModeType, NzMenuThemeType } from "ng-zorro-antd/menu";
+import { NzMenuThemeType } from "ng-zorro-antd/menu";
 import { CONFIG } from "@/config";
 import { IAppMenu } from "@/config/app-menu";
 import { getPathFromUrl } from "@/helpers/utils";
@@ -16,12 +16,10 @@ export class AppAsideComponent implements OnInit {
 
   menus: IAppMenu;
   menuTheme: NzMenuThemeType;
-  menuMode: NzMenuModeType = "vertical";
 
   constructor(private router: Router) {
     this.menus = CONFIG.menus;
     this.menuTheme = CONFIG.asideTheme;
-    this.menuMode = CONFIG.layout === "vertical" ? "horizontal" : "inline";
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {

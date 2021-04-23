@@ -19,6 +19,10 @@ const routes: Routes = [
         path: "form",
         loadChildren: () => import("./form/form.module").then((m) => m.FormModule),
       },
+      {
+        path: "account",
+        loadChildren: () => import("./account/account.module").then((m) => m.AccountModule),
+      },
     ],
   },
   {
