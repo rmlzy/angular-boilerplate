@@ -1,10 +1,11 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnInit, ViewEncapsulation } from "@angular/core";
 
 @Component({
-  // tslint:disable-next-line:component-selector
   selector: "div[example]",
   templateUrl: "./example.component.html",
   styleUrls: ["./example.component.less"],
+  preserveWhitespaces: false,
+  encapsulation: ViewEncapsulation.None,
 })
 export class ExampleComponent implements OnInit {
   @Input() theme = "light";
