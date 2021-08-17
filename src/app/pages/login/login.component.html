@@ -1,38 +1,42 @@
-<div nz-row class="login">
-  <div nz-col nzSpan="14"></div>
-  <div nz-col nzSpan="10">
-    <div class="login-form">
-      <form nz-form>
-        <h2>Sign In</h2>
+<div class="login">
+  <div class="login-form">
+    <form nz-form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <h2>Nest Boilerplate</h2>
 
-        <nz-form-item>
-          <nz-form-control>
-            <input nz-input placeholder="Username" nzSize="large" />
-          </nz-form-control>
-        </nz-form-item>
+      <nz-form-item>
+        <nz-form-control nzErrorTip="请填写账号">
+          <input nz-input placeholder="账号" nzSize="large" formControlName="username" />
+        </nz-form-control>
+      </nz-form-item>
 
-        <nz-form-item>
-          <nz-form-control>
-            <input nz-input placeholder="Password" nzSize="large" />
-          </nz-form-control>
-        </nz-form-item>
+      <nz-form-item>
+        <nz-form-control nzErrorTip="请填写密码">
+          <input nz-input placeholder="密码" nzSize="large" formControlName="password" />
+        </nz-form-control>
+      </nz-form-item>
 
-        <nz-form-item>
-          <nz-form-control>
-            <label nz-checkbox>
-              <span>Remember me</span>
-            </label>
-          </nz-form-control>
-        </nz-form-item>
+      <nz-form-item>
+        <nz-form-control>
+          <label nz-checkbox>
+            <span>记住我</span>
+          </label>
+        </nz-form-control>
+      </nz-form-item>
 
-        <nz-form-item nz-row style="margin-bottom: 8px">
-          <nz-form-control>
-            <button nz-button nzBlock nzSize="large" nzType="primary" (click)="submit()">
-              Submit
-            </button>
-          </nz-form-control>
-        </nz-form-item>
-      </form>
-    </div>
+      <nz-form-item nz-row style="margin-bottom: 8px">
+        <nz-form-control>
+          <button
+            type="submit"
+            nz-button
+            nzBlock
+            nzSize="large"
+            nzType="primary"
+            [nzLoading]="submitting"
+          >
+            登录
+          </button>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { ILoginFormData, LoginService } from "./login.service";
 
 @Component({
   selector: "app-login",
@@ -7,12 +8,28 @@ import { Router } from "@angular/router";
   styleUrls: ["./login.component.less"],
 })
 export class LoginComponent implements OnInit {
-  constructor(private router: Router) {}
+  submitting = false;
+  loginForm!: FormGroup;
 
-  ngOnInit() {}
+  constructor(private fb: FormBuilder, private loginService: LoginService) {}
 
-  submit() {
-    console.log("submit");
-    this.router.navigateByUrl("/");
+  ngOnInit() {
+    this.loginForm = this.fb.group({
+      username: ["", [Validators.required]],
+      password: ["", [Validators.required]],
+    });
+  }
+
+  async submit() {
+    for (const i in this.loginForm.controls) {
+      this.loginForm.controls[i].markAsDirty();
+      this.loginForm.controls[i].updateValueAndValidity();
+    }
+    if (!this.loginForm.valid) {
+      return;
+    }
+    this.submitting = true;
+    await this.loginService.submit(this.loginForm.value as ILoginFormData);
+    this.submitting = false;
   }
 }
