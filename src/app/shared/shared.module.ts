@@ -1,9 +1,9 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NgApexchartsModule } from "ng-apexcharts";
+import { ExampleComponent, NzFooterBarComponent, TagPickerComponent } from "../components";
 import { NgZorroAntdModule } from "./ng-zorro-antd.module";
-import { ExampleComponent, TagPickerComponent, NzFooterBarComponent } from "../components";
 
 const globalCmpts = [ExampleComponent, TagPickerComponent, NzFooterBarComponent];
 

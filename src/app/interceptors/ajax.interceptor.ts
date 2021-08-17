@@ -1,14 +1,14 @@
-import { Observable } from "rxjs";
-import { Injectable } from "@angular/core";
 import {
-  HttpRequest,
-  HttpHandler,
   HttpEvent,
-  HttpInterceptor,
+  HttpHandler,
   HttpHeaders,
+  HttpInterceptor,
+  HttpRequest,
 } from "@angular/common/http";
+import { Injectable } from "@angular/core";
 import { CookieService } from "ngx-cookie-service";
-import { environment } from "@/environments/environment";
+import { Observable } from "rxjs";
+import { environment } from "~/environments/environment";
 
 @Injectable()
 export class AjaxInterceptor implements HttpInterceptor {

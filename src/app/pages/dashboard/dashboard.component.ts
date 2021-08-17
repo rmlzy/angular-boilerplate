@@ -1,11 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 import {
-  revenueChart,
-  newClientsChart,
   activeUserChart,
-  mentionChart,
-  developChart,
   demoTable,
+  developChart,
+  mentionChart,
+  newClientsChart,
+  revenueChart,
 } from "./mock-data";
 
 interface Person {

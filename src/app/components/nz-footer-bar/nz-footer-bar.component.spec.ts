@@ -1,5 +1,5 @@
-import { By } from "@angular/platform-browser";
 import { TestBed } from "@angular/core/testing";
+import { By } from "@angular/platform-browser";
 import { NzFooterBarComponent } from "./nz-footer-bar.component";
 
 describe("NzFooterBarComponent", () => {

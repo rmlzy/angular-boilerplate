@@ -1,15 +1,15 @@
-import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
 
 import { SharedModule } from "../shared/shared.module";
-import { ThemeRoutingModule } from "./theme-routing.module";
 import {
-  AppHeaderComponent,
-  AppBodyComponent,
   AppAsideComponent,
+  AppBodyComponent,
   AppFooterComponent,
+  AppHeaderComponent,
 } from "./components";
-import { DefaultComponent, BlankComponent } from "./layouts";
+import { BlankComponent, DefaultComponent } from "./layouts";
+import { ThemeRoutingModule } from "./theme-routing.module";
 
 @NgModule({
   declarations: [

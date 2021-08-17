@@ -1,9 +1,9 @@
-import { Component, EventEmitter, OnInit, Input, Output } from "@angular/core";
+import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
 import { NavigationEnd, Router } from "@angular/router";
 import { NzMenuThemeType } from "ng-zorro-antd/menu";
-import { CONFIG } from "@/config";
-import { IAppMenu } from "@/config/app-menu";
-import { getPathFromUrl } from "@/helpers/utils";
+import { CONFIG } from "~/config";
+import { IAppMenu } from "~/config/app-menu";
+import { getPathFromUrl } from "~/helpers/utils";
 
 @Component({
   selector: "app-aside",

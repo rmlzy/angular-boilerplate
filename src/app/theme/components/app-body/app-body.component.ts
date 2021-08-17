@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Router, Event, NavigationEnd } from "@angular/router";
+import { Router } from "@angular/router";
 
 // const expandMenu = (menus) => {
 //   const result = [];

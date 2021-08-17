@@ -1,5 +1,5 @@
-import { IAppMenu, APP_MENUS } from "./app-menu";
 import { NzMenuThemeType } from "ng-zorro-antd/menu";
+import { APP_MENUS, IAppMenu } from "./app-menu";
 
 export interface IConfig {
   menus: IAppMenu;

@@ -1,3 +1,1 @@
-# ng-tabler
-
-The Angular implementation of Tabler.
+# Angular Boilerplate

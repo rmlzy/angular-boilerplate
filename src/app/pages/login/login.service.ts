@@ -1,9 +1,9 @@
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
-import { HttpClient } from "@angular/common/http";
 import { NzModalService } from "ng-zorro-antd/modal";
 import { CookieService } from "ngx-cookie-service";
-import { IResponse } from "@/interfaces";
+import { IResponse } from "~/interfaces";
 
 export interface ILoginFormData {
   username: string;
