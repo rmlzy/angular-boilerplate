@@ -1,0 +1,36 @@
+<nz-page-header nzTitle="用户管理">
+  <nz-page-header-extra>
+    <input class="w200" nz-input placeholder="请输入关键字搜索" />
+    <button nz-button nzType="primary"><i nz-icon nzType="plus" nzTheme="outline"></i>新建</button>
+  </nz-page-header-extra>
+</nz-page-header>
+
+<nz-card>
+  <div class="mb15">
+    <button class="mr15" nz-button>导出</button>
+    <button class="mr15" nz-button>导入</button>
+  </div>
+
+  <nz-table [nzLoading]="loading" #userTable [nzData]="userRecords">
+    <thead>
+      <tr>
+        <th>用户名</th>
+        <th>真实姓名</th>
+        <th>邮箱</th>
+        <th nzWidth="200px">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userRecords">
+        <td>{{ user.username }}</td>
+        <td>{{ user.realname }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+          <a>编辑</a>
+          <nz-divider nzType="vertical"></nz-divider>
+          <a>删除</a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+</nz-card>

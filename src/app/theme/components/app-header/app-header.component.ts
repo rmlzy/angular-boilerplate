@@ -13,9 +13,7 @@ export class AppHeaderComponent implements OnInit {
 
   ngOnInit() {
     this.userService.userProfile$.subscribe((res) => {
-      console.log("收到数据", res);
-      if (res.statusCode !== 200) {
-      }
+      this.userProfile = res.data;
     });
   }
 }
