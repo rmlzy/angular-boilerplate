@@ -1,7 +1,7 @@
 <div class="login">
   <div class="login-form">
     <form nz-form [formGroup]="loginForm" (ngSubmit)="submit()">
-      <h2>Angular Boilerplate</h2>
+      <div class="login-logo">Angular Boilerplate</div>
 
       <nz-form-item>
         <nz-form-control nzErrorTip="请填写账号">
@@ -11,7 +11,13 @@
 
       <nz-form-item>
         <nz-form-control nzErrorTip="请填写密码">
-          <input nz-input placeholder="密码" nzSize="large" formControlName="password" />
+          <input
+            nz-input
+            placeholder="密码"
+            nzSize="large"
+            type="password"
+            formControlName="password"
+          />
         </nz-form-control>
       </nz-form-item>
 

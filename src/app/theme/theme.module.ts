@@ -1,7 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
-
-import { SharedModule } from "../shared/shared.module";
+import { CoreModule } from "~/core/core.module";
 import {
   AppAsideComponent,
   AppBodyComponent,
@@ -20,6 +19,6 @@ import { ThemeRoutingModule } from "./theme-routing.module";
     AppFooterComponent,
     BlankComponent,
   ],
-  imports: [CommonModule, SharedModule, ThemeRoutingModule],
+  imports: [CommonModule, CoreModule, ThemeRoutingModule],
 })
 export class ThemeModule {}

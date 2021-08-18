@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { NzModalService } from "ng-zorro-antd/modal";
 import { CookieService } from "ngx-cookie-service";
-import { IResponse } from "~/interfaces";
+import { IResponse } from "~/core";
 
 export interface ILoginFormData {
   username: string;

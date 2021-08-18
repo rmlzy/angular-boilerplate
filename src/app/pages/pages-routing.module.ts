@@ -11,18 +11,10 @@ const routes: Routes = [
     component: DefaultComponent,
     children: [
       { path: "", component: DashboardComponent },
-      {
-        path: "interface",
-        loadChildren: () => import("./interface/interface.module").then((m) => m.InterfaceModule),
-      },
-      {
-        path: "form",
-        loadChildren: () => import("./form/form.module").then((m) => m.FormModule),
-      },
-      {
-        path: "account",
-        loadChildren: () => import("./account/account.module").then((m) => m.AccountModule),
-      },
+      // {
+      //   path: "interface",
+      //   loadChildren: () => import("./interface/interface.module").then((m) => m.InterfaceModule),
+      // },
     ],
   },
   {

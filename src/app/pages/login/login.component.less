@@ -1,29 +1,30 @@
 .login {
   width: 100%;
   height: 100%;
-  background: #2f353a;
-
-  & > div {
-    height: 100%;
-  }
+  background: #232e3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &-form {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    background: #fff;
+    width: 440px;
+    height: 375px;
+    padding: 35px 40px 50px;
+    background-color: #fff;
+    border-radius: 4px;
 
     form {
       margin: 0 auto;
-      width: 450px;
-      height: 450px;
+      width: 100%;
     }
+  }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+  &-logo {
+    text-align: center;
+    font-size: 26px;
+    padding: 20px 0 40px;
   }
 }

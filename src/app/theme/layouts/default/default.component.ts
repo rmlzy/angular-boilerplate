@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { CONFIG } from "../../../config";
+import { CONFIG } from "~/config";
 
 @Component({
   selector: "app-default",

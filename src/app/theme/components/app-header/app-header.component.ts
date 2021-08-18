@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { IUserProfile, UserService } from "~/core";
 
 @Component({
   selector: "app-header",
@@ -6,7 +7,13 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./app-header.component.less"],
 })
 export class AppHeaderComponent implements OnInit {
-  constructor() {}
+  userProfile: IUserProfile = new IUserProfile();
 
-  ngOnInit() {}
+  constructor(private userService: UserService) {}
+
+  ngOnInit() {
+    this.userService.userProfile$.subscribe((res) => {
+      console.log(res);
+    });
+  }
 }

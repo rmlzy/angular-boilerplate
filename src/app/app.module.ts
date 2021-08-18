@@ -7,10 +7,9 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NZ_I18N, zh_CN } from "ng-zorro-antd/i18n";
 import { CookieService } from "ngx-cookie-service";
+import { AjaxInterceptor, CoreModule } from "~/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { AjaxInterceptor } from "./interceptors/ajax.interceptor";
-import { SharedModule } from "./shared/shared.module";
 
 registerLocaleData(zh);
 
@@ -22,7 +21,7 @@ registerLocaleData(zh);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    SharedModule,
+    CoreModule,
   ],
   providers: [
     CookieService,

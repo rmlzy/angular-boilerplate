@@ -4,7 +4,7 @@
     <div class="user">
       <div nz-dropdown [nzDropdownMenu]="menu" class="user-name">
         <nz-avatar nzShape="square" nzSrc="assets/images/author.jpeg"></nz-avatar>
-        <span>rmlzy</span>
+        <span>{{ userProfile?.realname }}</span>
       </div>
       <nz-dropdown-menu #menu="nzDropdownMenu">
         <ul nz-menu nzSelectable>
