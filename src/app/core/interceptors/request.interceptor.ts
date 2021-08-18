@@ -11,27 +11,26 @@ import { Observable } from "rxjs";
 import { environment } from "~/environments/environment";
 
 @Injectable()
-export class AjaxInterceptor implements HttpInterceptor {
+export class RequestInterceptor implements HttpInterceptor {
   constructor(private cookieService: CookieService) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     // 补全 URL
-    const { ajaxBaseUrl } = environment;
-    const fullUrl = request.url.startsWith("/")
-      ? `${ajaxBaseUrl}${request.url}`
-      : `${ajaxBaseUrl}/${request.url}`;
+    let url = environment.ajaxBaseUrl;
+    if (request.url.startsWith("/")) {
+      url += request.url;
+    } else {
+      url += `/${request.url}`;
+    }
 
-    // Header 中附加 token
+    // 在 Header 中附加 Token
     const token = this.cookieService.get("token");
-    let headers = new HttpHeaders();
+    let headers = new HttpHeaders({ "Content-Type": "application/json" });
     if (token) {
       headers = headers.append("token", token);
     }
 
-    const clonedReq = request.clone({
-      url: fullUrl,
-      headers,
-    });
-    return next.handle(clonedReq);
+    const cloned = request.clone({ url, headers });
+    return next.handle(cloned);
   }
 }

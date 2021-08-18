@@ -23,10 +23,6 @@ export class LoginService {
 
   async submit(formData: ILoginFormData) {
     const res = await this.http.post<IResponse<string>>("/login", formData).toPromise();
-    if (res.statusCode !== 200) {
-      this.modal.error({ nzTitle: "报错", nzContent: res.message });
-      return;
-    }
     this.cookieService.set("token", res.data);
     await this.router.navigateByUrl("/");
   }

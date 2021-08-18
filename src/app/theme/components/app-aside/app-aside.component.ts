@@ -3,7 +3,7 @@ import { NavigationEnd, Router } from "@angular/router";
 import { NzMenuThemeType } from "ng-zorro-antd/menu";
 import { CONFIG } from "~/config";
 import { IAppMenu } from "~/config/app-menu";
-import { getPathFromUrl } from "~/helpers/utils";
+import { UtilService } from "~/core";
 
 @Component({
   selector: "app-aside",
@@ -17,13 +17,13 @@ export class AppAsideComponent implements OnInit {
   menus: IAppMenu;
   menuTheme: NzMenuThemeType;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private util: UtilService) {
     this.menus = CONFIG.menus;
     this.menuTheme = CONFIG.asideTheme;
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        const path = getPathFromUrl(event.urlAfterRedirects);
+        const path = util.getPathFromUrl(event.urlAfterRedirects);
         this.setActivateMenu(path);
       }
     });

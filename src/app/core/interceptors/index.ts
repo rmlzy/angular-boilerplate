@@ -1,1 +1,2 @@
-export * from "./ajax.interceptor";
+export * from "./request.interceptor";
+export * from "./response.interceptor";
