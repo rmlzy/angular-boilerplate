@@ -39,7 +39,6 @@
               }
             ],
             "styles": [
-              "./node_modules/ng-zorro-antd/ng-zorro-antd.less",
               "src/assets/styles/global.less"
             ],
             "scripts": []
@@ -108,8 +107,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
-              "src/styles.less"
+              "src/assets/styles/global.less"
             ],
             "scripts": []
           }

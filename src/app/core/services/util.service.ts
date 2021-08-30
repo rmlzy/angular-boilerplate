@@ -1,13 +1,13 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class UtilService {
   constructor() {}
 
   getPathFromUrl(url: string): string {
-    const idx = url.indexOf("?");
+    const idx = url.indexOf('?');
     if (idx === -1) {
       return url;
     }

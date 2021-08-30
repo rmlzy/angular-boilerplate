@@ -1,14 +1,14 @@
-import { CommonModule } from "@angular/common";
-import { NgModule } from "@angular/core";
-import { CoreModule } from "~/core/core.module";
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { CoreModule } from '~/core/core.module';
 import {
   AppAsideComponent,
   AppBodyComponent,
   AppFooterComponent,
   AppHeaderComponent,
-} from "./components";
-import { BlankComponent, DefaultComponent } from "./layouts";
-import { ThemeRoutingModule } from "./theme-routing.module";
+} from './components';
+import { BlankComponent, DefaultComponent } from './layouts';
+import { ThemeRoutingModule } from './theme-routing.module';
 
 @NgModule({
   declarations: [

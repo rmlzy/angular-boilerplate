@@ -1,5 +1,9 @@
-@import "./ng-zorro";
-@import "./layout";
+@import './layout';
+@import './ng-zorro';
+
+body {
+  background: #f4f6fa;
+}
 
 .w100 {
   width: 100%;
@@ -25,14 +29,49 @@
   margin-right: 15px;
 }
 
+.text {
+  &-left {
+    text-align: left;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-right {
+    text-align: right;
+  }
+}
+
 .ant-page-header {
   padding: 0 0 16px !important;
 }
 
-.table-actions {
-  margin-bottom: 15px;
+.ant-btn + .ant-btn {
+  margin-left: 15px;
 }
 
+.ant-table {
+  .ant-btn + .ant-btn {
+    margin-left: 0;
+  }
+}
+
+.ant-table-pagination.ant-pagination {
+  padding: 0 16px;
+}
+
+.no-padding {
+  & > .ant-card-body {
+    padding: 0;
+  }
+}
+
+.ant-card + .ant-card {
+  margin-top: 15px;
+}
+
+// 报错页面
 .error {
   position: relative;
   width: 100%;

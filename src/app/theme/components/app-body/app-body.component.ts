@@ -1,5 +1,5 @@
-import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 // const expandMenu = (menus) => {
 //   const result = [];
@@ -28,9 +28,9 @@ import { Router } from "@angular/router";
 // };
 
 @Component({
-  selector: "app-body",
-  templateUrl: "./app-body.component.html",
-  styleUrls: ["./app-body.component.less"],
+  selector: 'app-body',
+  templateUrl: './app-body.component.html',
+  styleUrls: ['./app-body.component.less'],
 })
 export class AppBodyComponent implements OnInit {
   currentBreads = [];

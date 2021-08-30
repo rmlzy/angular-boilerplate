@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListComponent } from './list.component';
+import { UserUpdateBtnComponent } from './user-update-btn.component';
 
-describe('ListComponent', () => {
-  let component: ListComponent;
-  let fixture: ComponentFixture<ListComponent>;
+describe('UserUpdateBtnComponent', () => {
+  let component: UserUpdateBtnComponent;
+  let fixture: ComponentFixture<UserUpdateBtnComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ListComponent],
+      declarations: [UserUpdateBtnComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListComponent);
+    fixture = TestBed.createComponent(UserUpdateBtnComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

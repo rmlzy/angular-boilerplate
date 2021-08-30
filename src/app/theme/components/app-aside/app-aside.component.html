@@ -5,8 +5,15 @@
   </a>
 
   <div class="app-aside__menu">
-    <ul nz-menu [nzInlineCollapsed]="collapsed" [nzTheme]="menuTheme" nzMode="inline">
-      <ng-container *ngTemplateOutlet="menuTpl; context: { $implicit: menus }"></ng-container>
+    <ul
+      nz-menu
+      [nzInlineCollapsed]="collapsed"
+      [nzTheme]="menuTheme"
+      nzMode="inline"
+    >
+      <ng-container
+        *ngTemplateOutlet="menuTpl; context: { $implicit: menus }"
+      ></ng-container>
       <ng-template #menuTpl let-menus>
         <ng-container *ngFor="let menu of menus">
           <li
@@ -32,7 +39,10 @@
           >
             <ul>
               <ng-container
-                *ngTemplateOutlet="menuTpl; context: { $implicit: menu.children }"
+                *ngTemplateOutlet="
+                  menuTpl;
+                  context: { $implicit: menu.children }
+                "
               ></ng-container>
             </ul>
           </li>
@@ -43,7 +53,11 @@
 
   <div class="app-aside__collapsed">
     <div class="collapsed-icon" (click)="toggle()">
-      <i nz-icon [nzType]="collapsed ? 'menu-fold' : 'menu-unfold'" nzTheme="outline"></i>
+      <i
+        nz-icon
+        [nzType]="collapsed ? 'menu-fold' : 'menu-unfold'"
+        nzTheme="outline"
+      ></i>
     </div>
   </div>
 </div>

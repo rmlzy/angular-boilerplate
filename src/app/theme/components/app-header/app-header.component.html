@@ -3,7 +3,10 @@
     <div class="nav tools"></div>
     <div class="user">
       <div nz-dropdown [nzDropdownMenu]="menu" class="user-name">
-        <nz-avatar nzShape="square" nzSrc="assets/images/author.jpeg"></nz-avatar>
+        <nz-avatar
+          nzShape="square"
+          nzSrc="assets/images/author.jpeg"
+        ></nz-avatar>
         <span>{{ userProfile?.realname }}</span>
       </div>
       <nz-dropdown-menu #menu="nzDropdownMenu">

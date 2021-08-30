@@ -1,14 +1,14 @@
-import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
-import { NavigationEnd, Router } from "@angular/router";
-import { NzMenuThemeType } from "ng-zorro-antd/menu";
-import { CONFIG } from "~/config";
-import { IAppMenu } from "~/config/app-menu";
-import { UtilService } from "~/core";
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { NzMenuThemeType } from 'ng-zorro-antd/menu';
+import { CONFIG } from '~/config';
+import { IAppMenu } from '~/config/app-menu';
+import { UtilService } from '~/core';
 
 @Component({
-  selector: "app-aside",
-  templateUrl: "./app-aside.component.html",
-  styleUrls: ["./app-aside.component.less"],
+  selector: 'app-aside',
+  templateUrl: './app-aside.component.html',
+  styleUrls: ['./app-aside.component.less'],
 })
 export class AppAsideComponent implements OnInit {
   @Input() collapsed: boolean | undefined;

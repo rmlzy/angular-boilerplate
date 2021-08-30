@@ -1,17 +1,51 @@
 <nz-page-header nzTitle="用户管理">
   <nz-page-header-extra>
-    <input class="w200" nz-input placeholder="请输入关键字搜索" />
-    <button nz-button nzType="primary"><i nz-icon nzType="plus" nzTheme="outline"></i>新建</button>
+    <user-update-btn (refresh)="search()"></user-update-btn>
   </nz-page-header-extra>
 </nz-page-header>
 
 <nz-card>
-  <div class="mb15">
-    <button class="mr15" nz-button>导出</button>
-    <button class="mr15" nz-button>导入</button>
-  </div>
+  <form nz-form [nzLayout]="'inline'">
+    <nz-form-item>
+      <nz-form-label>姓名</nz-form-label>
+      <nz-form-control>
+        <nz-input-group>
+          <input
+            [(ngModel)]="tableQuery.username"
+            name="username"
+            nz-input
+            placeholder="请输入关键字"
+          />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <button
+          [nzLoading]="loading"
+          nz-button
+          nzType="primary"
+          (click)="search()"
+        >
+          查询
+        </button>
+        <button [nzLoading]="loading" nz-button (click)="reset()">重置</button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</nz-card>
 
-  <nz-table [nzLoading]="loading" #userTable [nzData]="userRecords">
+<nz-card class="no-padding">
+  <nz-table
+    nzShowSizeChanger
+    [nzLoading]="loading"
+    [nzFrontPagination]="false"
+    [nzData]="tableData.items"
+    [nzTotal]="tableData.total"
+    [nzPageIndex]="tableData.pageIndex"
+    [nzPageSize]="tableData.pageSize"
+    (nzQueryParams)="onQueryChange($event)"
+  >
     <thead>
       <tr>
         <th>用户名</th>
@@ -21,14 +55,20 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let user of userRecords">
+      <tr *ngFor="let user of tableData.items">
         <td>{{ user.username }}</td>
         <td>{{ user.realname }}</td>
         <td>{{ user.email }}</td>
         <td>
-          <a>编辑</a>
+          <user-update-btn
+            [id]="user.id"
+            (refresh)="search()"
+          ></user-update-btn>
           <nz-divider nzType="vertical"></nz-divider>
-          <a>删除</a>
+          <user-delete-btn
+            [id]="user.id"
+            (refresh)="search()"
+          ></user-delete-btn>
         </td>
       </tr>
     </tbody>

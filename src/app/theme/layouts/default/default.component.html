@@ -6,7 +6,10 @@
   [class.is-fixed-header]="config.fixedHeader"
   [class.is-fluid]="config.fluid"
 >
-  <app-aside [collapsed]="collapsed" (toggleCollapsed)="onToggleCollapsed($event)"></app-aside>
+  <app-aside
+    [collapsed]="collapsed"
+    (toggleCollapsed)="onToggleCollapsed($event)"
+  ></app-aside>
   <app-header></app-header>
   <app-body></app-body>
   <app-footer></app-footer>

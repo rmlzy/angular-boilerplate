@@ -1,5 +1,5 @@
-import { NzMenuThemeType } from "ng-zorro-antd/menu";
-import { APP_MENUS, IAppMenu } from "./app-menu";
+import { NzMenuThemeType } from 'ng-zorro-antd/menu';
+import { APP_MENUS, IAppMenu } from './app-menu';
 
 export interface IConfig {
   menus: IAppMenu;
@@ -10,7 +10,7 @@ export interface IConfig {
 
 export const CONFIG: IConfig = {
   menus: APP_MENUS,
-  asideTheme: "dark",
+  asideTheme: 'dark',
   fixedHeader: true,
   fluid: true,
 };

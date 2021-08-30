@@ -1,0 +1,77 @@
+<button *ngIf="!id" nz-button nzType="primary" (click)="showCreateDrawer()">
+  <i nz-icon nzType="plus" nzTheme="outline"></i>
+  <span>新建</span>
+</button>
+
+<a *ngIf="id" href="javascript:;" (click)="showUpdateDrawer()">编辑</a>
+
+<nz-drawer
+  [nzTitle]="id ? '编辑用户' : '新建用户'"
+  [nzBodyStyle]="{ overflow: 'auto' }"
+  [nzMaskClosable]="false"
+  [nzWidth]="500"
+  [nzVisible]="visible"
+  [nzFooter]="footerTpl"
+  (nzOnClose)="closeDrawer()"
+>
+  <form nz-form *nzDrawerContent nzLayout="vertical" [formGroup]="userForm">
+    <nz-spin [nzSpinning]="mounting">
+      <nz-form-item>
+        <nz-form-label nzRequired>登录账号</nz-form-label>
+        <nz-form-control nzErrorTip="请检查">
+          <input
+            nz-input
+            formControlName="username"
+            placeholder="请填写登录账号"
+          />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label nzRequired>登录密码</nz-form-label>
+        <nz-form-control nzErrorTip="请检查">
+          <input
+            nz-input
+            formControlName="password"
+            placeholder="请填写登录密码"
+          />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label nzRequired>真实姓名</nz-form-label>
+        <nz-form-control nzErrorTip="请检查">
+          <input
+            nz-input
+            formControlName="realname"
+            placeholder="请填写真实姓名"
+          />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label nzRequired>邮箱</nz-form-label>
+        <nz-form-control nzErrorTip="请检查">
+          <input
+            nz-input
+            formControlName="email"
+            placeholder="请填写用户姓名"
+          />
+        </nz-form-control>
+      </nz-form-item>
+    </nz-spin>
+  </form>
+
+  <ng-template #footerTpl>
+    <div class="text-right">
+      <button [nzLoading]="submitting" nz-button (click)="closeDrawer()">
+        取消
+      </button>
+      <button
+        [nzLoading]="submitting"
+        nz-button
+        nzType="primary"
+        (click)="submit()"
+      >
+        提交
+      </button>
+    </div>
+  </ng-template>
+</nz-drawer>
