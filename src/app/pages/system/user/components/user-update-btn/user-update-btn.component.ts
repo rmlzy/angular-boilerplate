@@ -64,8 +64,9 @@ export class UserUpdateBtnComponent implements OnInit {
       }
       this.closeDrawer();
       this.refresh.emit();
-    } finally {
-      this.submitting = false;
+    } catch (e) {
+      // ignore
     }
+    this.submitting = false;
   }
 }

@@ -21,9 +21,10 @@ export class UserDeleteBtnComponent implements OnInit {
     try {
       await this.userService.removeUser(this.id);
       this.refresh.emit();
-    } finally {
-      this.loading = false;
+    } catch (e) {
+      // ignore
     }
+    this.loading = false;
   }
 
   cancel() {}
